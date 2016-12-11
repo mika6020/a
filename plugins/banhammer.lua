@@ -208,7 +208,7 @@ local support_id = msg.from.id
   end
 
 
-  if matches[1]:lower() == 'unban' or matches[1] =='خ بن' then -- /unban
+  if matches[1]:lower() == 'unban' or matches[1] =='رفع بن' then -- /unban
     if type(msg.reply_id)~="nil" and is_momod(msg) then
       local msgr = get_message(msg.reply_id,unban_by_reply, false)
     end
@@ -299,7 +299,7 @@ end
 		resolve_username(username, kick_ban_res, cbres_extra)
       end
   end
-  if matches[1]:lower() == 'unbanall' or matches[1] =='خ گلوبال بن' then -- Global unban
+  if matches[1]:lower() == 'unbanall' or matches[1] =='رفع گلوبال بن' then -- Global unban
     local user_id = matches[2]
     local chat_id = msg.to.id
       if string.match(matches[2], '^%d+$') then
@@ -326,34 +326,34 @@ end
 
 return {
   patterns = {
-    "^[#!/]([Bb]anall) (.*)$",
-    "^[#!/]([Bb]anall)$",
-    "^[#!/]([Bb]anlist) (.*)$",
-    "^[#!/]([Bb]anlist)$",
-    "^[#!/]([Gg]banlist)$",
-	"^[#!/]([Kk]ickme)",
-    "^[#!/]([Kk]ick)$",
-	"^[#!/]([Bb]an)$",
-    "^[!#/](گلوبال بن) (.*)$",
-    "^[!#/](گلوبال بن)$",
-    "^[!#/](لیست بن) (.*)$",
-    "^[!#/](لیست بن)$",
-    "^[!#/](لیست گلوبال بن)$",
-    "^[!#/](اخراج)$",
-	"^[!#/](بن)$",
-    "^[!#/](بن) (.*)$",
-    "^[!#/](خ بن) (.*)$",
-    "^[!#/](خ گلوبال بن) (.*)$",
-    "^[!#/](خ گلوبال بن)$",
-    "^[!#/](اخراج) (.*)$",
-    "^[!#/](خ بن)$",
-    "^[#!/]([Bb]an) (.*)$",
-    "^[#!/]([Uu]nban) (.*)$",
-    "^[#!/]([Uu]nbanall) (.*)$",
-    "^[#!/]([Uu]nbanall)$",
-    "^[#!/]([Kk]ick) (.*)$",
-    "^[#!/]([Uu]nban)$",
-    "^[#!/]([Ii]d)$",
+    "^([Bb]anall) (.*)$",
+    "^([Bb]anall)$",
+    "^([Bb]anlist) (.*)$",
+    "^([Bb]anlist)$",
+    "^([Gg]banlist)$",
+    "^([Kk]ickme)",
+    "^([Kk]ick)$",
+    "^([Bb]an)$",
+    "^(گلوبال بن) (.*)$",
+    "^(گلوبال بن)$",
+    "^(لیست بن) (.*)$",
+    "^(لیست بن)$",
+    "^(لیست گلوبال بن)$",
+    "^(اخراج)$",
+    "^(بن)$",
+    "^(بن) (.*)$",
+    "^(رفع بن) (.*)$",
+    "^(رفع گلوبال بن) (.*)$",
+    "^(رفع گلوبال بن)$",
+    "^(اخراج) (.*)$",
+    "^(رفع بن)$",
+    "^([Bb]an) (.*)$",
+    "^([Uu]nban) (.*)$",
+    "^([Uu]nbanall) (.*)$",
+    "^([Uu]nbanall)$",
+    "^([Kk]ick) (.*)$",
+    "^([Uu]nban)$",
+    "^([Ii]d)$",
     "^!!tgservice (.+)$"
   },
   run = run,
