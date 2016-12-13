@@ -23,7 +23,7 @@ local second = string.gsub(matches[4], 's', '')
  local num3 = tonumber(second) 
 local num4 = tonumber(num1 + num2 + num3)
 redis:setex(hash, num4, true)
- return "🔐گروه قفل شد برای\nساعت⏰ : "..matches[2].."\nدقیقه🕰  : "..matches[3].." \nثانیه⏲   : "..matches[4].."\n⚠️لطفا از چت کردن و ارسال مطالب خودداری فرمایید ⚠️"
+ return "🔐گروه قفل شد برای\nساعت⏰ : "..matches[2].."\nدقیقه🕰  : "..matches[3].." \nثانیه⏲   : "..matches[4].."\n⚠️لطفا از چت کردن و ارسال مطالب خودداری فرمایید ⚠️\n🏵 @SKORT_TM 🏵\n"
  end
  end
 if matches[1] == 'بازکردن گروه' and is_momod(msg) then
@@ -42,4 +42,4 @@ run = run,
   pre_process = pre_process
 }
 end
--- our channel : @Cyrus0098
+
