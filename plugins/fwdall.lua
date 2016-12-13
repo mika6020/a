@@ -3,7 +3,7 @@ local function run(msg, matches)
       local data = load_data(_config.moderation.data)
                   local gid = data['fwdgroup']
 
-      if matches[1] == 'fwd' and not matches[2] and is_sudo(msg) then
+      if matches[1] == 'پیام بفرست' and not matches[2] and is_sudo(msg) then
       data['f2a'] = 'waiting'
       save_data(_config.moderation.data, data)
       return "اکنون متن خود را بفرستید"
@@ -23,7 +23,7 @@ local function run(msg, matches)
 end
 return {
   patterns = {
-    "^[#/!](fwd)$",
+    "^(پیام بفرست)$",
     "(.*)"
   },
   run = run
