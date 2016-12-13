@@ -97,6 +97,7 @@ return {
   usage = "!time [area]: Displays the local time in that area",
   patterns = {
   "^time (.*)$",
+  "^زمان$",
   "^زمان (.*)$"
   }, 
   run = run
