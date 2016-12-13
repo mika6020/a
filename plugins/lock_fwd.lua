@@ -10,7 +10,7 @@ local function pre_process(msg)
     
 local function run(msg, matches)
     chat_id =  msg.to.id
-    if is_momod(msg) and matches[1] == 'lock' or matches[1] == 'قفل کردن' then
+    if is_momod(msg) and matches[1] == 'lock' or matches[1] == 'قفل' then
                     local hash = 'mutef:'..msg.to.id
                     redis:set(hash, true)
                     return ""
@@ -22,10 +22,10 @@ end
 end
 return {
     patterns = {
-        '^[/!#](lock) fwd$',
-        '^[/!#](unlock) fwd$',
-        '^[/!#](قفل کردن) فوروارد$',
-        '^[/!#](بازکردن) فوروارد$'
+        '^(lock) fwd$',
+        '^(unlock) fwd$',
+       '^(قفل) فوروارد$',
+        '^(بازکردن) فوروارد$'
     },
     run = run,
     pre_process = pre_process
