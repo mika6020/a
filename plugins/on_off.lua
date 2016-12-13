@@ -80,8 +80,8 @@ return {
   "/channel enable: enable current channel",
   "/channel disable: disable current channel" },
  patterns = {
-  "^[!/][Bb]ot (on)",
-  "^[!/][Bb]ot (off)" }, 
+  "^[Bb]ot (on)",
+  "^[Bb]ot (off)" }, 
  run = run,
  --privileged = true,
  moderated = true,
