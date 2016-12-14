@@ -297,7 +297,7 @@ local permagbot4 = [[
 🏵 https://telegram.me/joinchat/DayKVkDVZJiicDYllvL9DQ 🏵
 
 ✨ ربات ارتباط با پشتیبانی ✨
-🏵 بزودی 🏵
+🏵 SKORTTM_BOT 🏵
 ]]
     if matches[1] == 'راهنمای مدیریتی' and is_momod(msg) then
         return permagbot  
