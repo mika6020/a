@@ -275,7 +275,7 @@ local function unlock_group_inline(msg, data, target)
 end
 
 
-local function lock_group_number(msg, data, target)
+--[[local function lock_group_number(msg, data, target)
   if not is_momod(msg) then
     return
   end
@@ -323,7 +323,7 @@ local function unlock_group_number(msg, data, target)
      else 
      return '🔐Number Posting Hasbeen unLocked🔓'
   end
-end
+end]]
 
 local function lock_group_links(msg, data, target)
   if not is_momod(msg) then
@@ -928,7 +928,7 @@ local function unlock_group_fosh(msg, data, target)
   end
 end]]
 
-local function lock_group_rtl(msg, data, target)
+--[[local function lock_group_rtl(msg, data, target)
   if not is_momod(msg) then
     return
   end
@@ -976,7 +976,7 @@ local function unlock_group_rtl(msg, data, target)
   else
     return '*RTL has been unlocked'
   end
-end
+end]]
 
 
 local function lock_group_join(msg, data, target)
@@ -1360,7 +1360,7 @@ local function unlock_group_flood(msg, data, target)
 end
 
 
-local function lock_group_arabic(msg, data, target)
+--[[local function lock_group_arabic(msg, data, target)
   if not is_momod(msg) then
     return
   end
@@ -1408,7 +1408,7 @@ local function unlock_group_arabic(msg, data, target)
     else
     return '🔒arabic posting HasBeen Unlocked🔓'
   end
-end
+end]]
 
 local function lock_group_membermod(msg, data, target)
   if not is_momod(msg) then
@@ -1806,11 +1806,11 @@ function show_supergroup_settingsmod(msg, target)
 			data[tostring(target)]['settings']['public'] = 'no'
 		end
 	end
-	if data[tostring(target)]['settings'] then
+	--[[if data[tostring(target)]['settings'] then
 		if not data[tostring(target)]['settings']['lock_rtl'] then
 			data[tostring(target)]['settings']['lock_rtl'] = 'no'
 		end
-        end
+        end]]
       if data[tostring(target)]['settings'] then
 		if not data[tostring(target)]['settings']['lock_tgservice'] then
 			data[tostring(target)]['settings']['lock_tgservice'] = 'no'
@@ -1857,6 +1857,21 @@ function show_supergroup_settingsmod(msg, target)
 		end
 	end
 	  if data[tostring(target)]['settings'] then
+		if not data[tostring(target)]['settings']['inline'] then
+			data[tostring(target)]['settings']['inline'] = 'no'
+		end
+	end
+	  if data[tostring(target)]['settings'] then
+		if not data[tostring(target)]['settings']['cmds'] then
+			data[tostring(target)]['settings']['cmds'] = 'no'
+		end
+	end
+	 --[[ if data[tostring(target)]['settings'] then
+		if not data[tostring(target)]['settings']['number'] then
+			data[tostring(target)]['settings']['number'] = 'no'
+		end
+	end]]
+	  if data[tostring(target)]['settings'] then
 		if not data[tostring(target)]['settings']['media'] then
 			data[tostring(target)]['settings']['media'] = 'no'
 		end
@@ -1881,21 +1896,57 @@ function show_supergroup_settingsmod(msg, target)
 			data[tostring(target)]['settings']['operator'] = 'no'
 		end
 	end
+	
 	if data[tostring(target)]['settings'] then
 		if not data[tostring(target)]['settings']['etehad'] then
 			data[tostring(target)]['settings']['etehad'] = 'no'
 		end
 	end
-	
+	if is_muted(tostring(target), 'Audio: yes') then
+ Audio = 'yes'
+ else
+ Audio = 'no'
+ end
+    if is_muted(tostring(target), 'Photo: yes') then
+ Photo = 'yes'
+ else
+ Photo = 'no'
+ end
+    if is_muted(tostring(target), 'Video: yes') then
+ Video = 'yes'
+ else
+ Video = 'no'
+ end
+    if is_muted(tostring(target), 'Gifs: yes') then
+ Gifs = 'yes'
+ else
+ Gifs = 'no'
+ end
+ if is_muted(tostring(target), 'Documents: yes') then
+ Documents = 'yes'
+ else
+ Documents = 'no'
+ end
+ if is_muted(tostring(target), 'Text: yes') then
+ Text = 'yes'
+ else
+ Text = 'no'
+ end
+  if is_muted(tostring(target), 'All: yes') then
+ All = 'yes'
+ else
+ All = 'no'
+ end
+
    local gp_type = data[tostring(msg.to.id)]['group_type']
 
   local settings = data[tostring(target)]['settings']
   local hash = 'group:'..msg.to.id
   local group_lang = redis:hget(hash,'lang')
   if group_lang then
- return reply_msg(msg.id," 📋 لیست تنظیمات گروه 📋\n➖➖➖➖➖➖➖\n🌟 قفل لینک : "..settings.lock_link.." \n🌟 قفل تبلیغات : "..settings.inline.." \n🌟 قفل دستورات : "..settings.cmds.." \n🌟 قفل شماره : "..settings.number.." \n🌟 قفل مخاطب : "..settings.lock_contacts.." \n🌟 قفل فلود : "..settings.flood.." \n🌟 حساسیت : "..NUM_MSG_MAX.." \n🌟 قفل اسپم : "..settings.lock_spam.." \n🌟 قفل فارسی : "..settings.lock_arabic.." \n🌟 قفل ممبر : "..settings.lock_member.." \n🌟 قفل راستچین : "..settings.lock_rtl.." \n🌟 قفل سیستم : "..settings.lock_tgservice.." \n🌟 قفل استیکر : "..settings.lock_sticker.." \n🌟 قفل تگ : "..settings.tag.." \n🌟 قفل شکلک : "..settings.emoji.." \n🌟 قفل انگلیسی : "..settings.english.." \n🌟 قفل فوروارد : "..settings.fwd.." \n🌟 قفل ریپلی : "..settings.reply.." \n🌟 قفل اعضا : "..settings.join.." \n🌟 قفل یوزرنیم : "..settings.username.." \n🌟 قفل مدیا : "..settings.media.." \n🌟 قفل ربات : "..bots_protection.." \n🌟 قفل اپراتور : "..settings.operator.." \n🌟 قفل سختگیرانه : "..settings.strict.." \n🌟 قفل همه تنظیمات : "..settings.all.." \n🌟 عمومی : "..settings.public.." \n➖➖➖➖➖➖➖ \n➖➖➖➖➖➖➖\n💫نوع گروه : "..gp_type.." \n➖➖➖➖➖➖➖\n🏵 @SKORT_TM 🏵\n➖➖➖➖➖➖➖\n", ok_cb, false)
+ return reply_msg(msg.id," 📋 لیست تنظیمات گروه 📋\n➖➖➖➖➖➖➖\n🌟 قفل لینک : "..settings.lock_link.." \n🌟 قفل تبلیغات : "..settings.inline.." \n🌟 قفل دستورات : "..settings.cmds.." \n🌟 قفل شماره : "..settings.number.." \n🌟 قفل مخاطب : "..settings.lock_contacts.." \n🌟 قفل فلود : "..settings.flood.." \n🌟 حساسیت : "..NUM_MSG_MAX.." \n🌟 قفل اسپم : "..settings.lock_spam.." \n🌟 قفل فارسی : "..settings.lock_arabic.." \n🌟 قفل ممبر : "..settings.lock_member.." \n🌟 قفل راستچین : "..settings.lock_rtl.." \n🌟 قفل سیستم : "..settings.lock_tgservice.." \n🌟 قفل استیکر : "..settings.lock_sticker.." \n🌟 قفل تگ : "..settings.tag.." \n🌟 قفل شکلک : "..settings.emoji.." \n🌟 قفل انگلیسی : "..settings.english.." \n🌟 قفل فوروارد : "..settings.fwd.." \n🌟 قفل ریپلی : "..settings.reply.." \n🌟 قفل اعضا : "..settings.join.." \n🌟 قفل یوزرنیم : "..settings.username.." \n🌟 قفل مدیا : "..settings.media.." \n🌟 قفل ربات : "..bots_protection.." \n🌟 قفل اپراتور : "..settings.operator.." \n🌟 قفل سختگیرانه : "..settings.strict.." \n🌟 قفل همه تنظیمات : "..settings.all.." \n🌟 عمومی : "..settings.public.." \n➖➖➖➖➖➖➖ \n 📝 قفل متن  : "..Text.."\n🖼قفل عکس : "..Photo.."\n🎆قفل گيف : "..Gifs.."\n🎤قفل صدا : "..Audio.."\n📽قفل فيلم : "..Video.."\n📂قفل فايل : "..Documents.."\n🔐 قفل همه  : "..All.." \n➖➖➖➖➖➖➖\n💫نوع گروه : "..gp_type.." \n➖➖➖➖➖➖➖\n🏵 @SKORT_TM 🏵\n➖➖➖➖➖➖➖\n", ok_cb, false)
  else
-return reply_msg(msg.id," 📋 لیست تنظیمات گروه 📋\n➖➖➖➖➖➖➖\n🌟 قفل لینک : "..settings.lock_link.." \n🌟 قفل تبلیغات : "..settings.inline.." \n🌟 قفل دستورات : "..settings.cmds.." \n🌟 قفل شماره : "..settings.number.." \n🌟 قفل مخاطب : "..settings.lock_contacts.." \n🌟 قفل فلود : "..settings.flood.." \n🌟 حساسیت : "..NUM_MSG_MAX.." \n🌟 قفل اسپم : "..settings.lock_spam.." \n🌟 قفل فارسی : "..settings.lock_arabic.." \n🌟 قفل ممبر : "..settings.lock_member.." \n🌟 قفل راستچین : "..settings.lock_rtl.." \n🌟 قفل سیستم : "..settings.lock_tgservice.." \n🌟 قفل استیکر : "..settings.lock_sticker.." \n🌟 قفل تگ : "..settings.tag.." \n🌟 قفل شکلک : "..settings.emoji.." \n🌟 قفل انگلیسی : "..settings.english.." \n🌟 قفل فوروارد : "..settings.fwd.." \n🌟 قفل ریپلی : "..settings.reply.." \n🌟 قفل اعضا : "..settings.join.." \n🌟 قفل یوزرنیم : "..settings.username.." \n🌟 قفل مدیا : "..settings.media.." \n🌟 قفل ربات : "..bots_protection.." \n🌟 قفل اپراتور : "..settings.operator.." \n🌟 قفل سختگیرانه : "..settings.strict.." \n🌟 قفل همه تنظیمات : "..settings.all.." \n🌟 عمومی : "..settings.public.." \n➖➖➖➖➖➖➖ \n➖➖➖➖➖➖➖\n💫نوع گروه : "..gp_type.."  \n➖➖➖➖➖➖➖\n🏵 @SKORT_TM 🏵\n➖➖➖➖➖➖➖\n", ok_cb, false)
+return reply_msg(msg.id," 📋 لیست تنظیمات گروه 📋\n➖➖➖➖➖➖➖\n🌟 قفل لینک : "..settings.lock_link.." \n🌟 قفل تبلیغات : "..settings.inline.." \n🌟 قفل دستورات : "..settings.cmds.." \n🌟 قفل شماره : "..settings.number.." \n🌟 قفل مخاطب : "..settings.lock_contacts.." \n🌟 قفل فلود : "..settings.flood.." \n🌟 حساسیت : "..NUM_MSG_MAX.." \n🌟 قفل اسپم : "..settings.lock_spam.." \n🌟 قفل فارسی : "..settings.lock_arabic.." \n🌟 قفل ممبر : "..settings.lock_member.." \n🌟 قفل راستچین : "..settings.lock_rtl.." \n🌟 قفل سیستم : "..settings.lock_tgservice.." \n🌟 قفل استیکر : "..settings.lock_sticker.." \n🌟 قفل تگ : "..settings.tag.." \n🌟 قفل شکلک : "..settings.emoji.." \n🌟 قفل انگلیسی : "..settings.english.." \n🌟 قفل فوروارد : "..settings.fwd.." \n🌟 قفل ریپلی : "..settings.reply.." \n🌟 قفل اعضا : "..settings.join.." \n🌟 قفل یوزرنیم : "..settings.username.." \n🌟 قفل مدیا : "..settings.media.." \n🌟 قفل ربات : "..bots_protection.." \n🌟 قفل اپراتور : "..settings.operator.." \n🌟 قفل سختگیرانه : "..settings.strict.." \n🌟 قفل همه تنظیمات : "..settings.all.." \n🌟 عمومی : "..settings.public.." \n➖➖➖➖➖➖➖ \n 📝 قفل متن  : "..Text.."\n🖼قفل عکس : "..Photo.."\n🎆قفل گيف : "..Gifs.."\n🎤قفل صدا : "..Audio.."\n📽قفل فيلم : "..Video.."\n📂قفل فايل : "..Documents.."\n🔐 قفل همه  : "..All.." \n➖➖➖➖➖➖➖\n💫نوع گروه : "..gp_type.."  \n➖➖➖➖➖➖➖\n🏵 @SKORT_TM 🏵\n➖➖➖➖➖➖➖\n", ok_cb, false)
 end
 end 
 
@@ -3076,36 +3127,6 @@ end
 
 		if matches[1] == 'lock'or matches[1] =='قفل' and is_momod(msg) then
 			local target = msg.to.id
-			     if matches[2] == 'all'or matches[2] =='همه تنظیمات' then
-      	local safemode ={
-        lock_group_links(msg, data, target),
-		lock_group_tag(msg, data, target),
-		lock_group_spam(msg, data, target),
-		lock_group_flood(msg, data, target),
-		lock_group_arabic(msg, data, target),
-		lock_group_membermod(msg, data, target),
-		lock_group_rtl(msg, data, target),
-		lock_group_tgservice(msg, data, target),
-		lock_group_sticker(msg, data, target),
-		lock_group_contacts(msg, data, target),
-		lock_group_english(msg, data, target),
-		lock_group_fwd(msg, data, target),
-		lock_group_reply(msg, data, target),
-		lock_group_join(msg, data, target),
-		lock_group_emoji(msg, data, target),
-		lock_group_username(msg, data, target),
-		--[[lock_group_fosh(msg, data, target),]]
-		lock_group_media(msg, data, target),
-		--[[lock_group_leave(msg, data, target),]]
-		lock_group_bots(msg, data, target),
-		lock_group_operator(msg, data, target),
-		lock_group_number(msg, data, target),
-		lock_group_inline(msg, data, target),
-		lock_group_cmds(msg, data, target),
-      	}
-      	return lock_group_all(msg, data, target), safemode
-      end
-
 			if matches[2] == 'links'or matches[2] =='لینک' then
 				savelog(msg.to.id, name_log.." ["..msg.from.id.."] locked link posting ")
 				return lock_group_links(msg, data, target)
@@ -3126,18 +3147,18 @@ end
 				savelog(msg.to.id, name_log.." ["..msg.from.id.."] locked flood ")
 				return lock_group_flood(msg, data, target)
 			end
-			if matches[2] == 'arabic'or matches[2] =='فارسی' then
+			--[[if matches[2] == 'arabic'or matches[2] =='فارسی' then
 				savelog(msg.to.id, name_log.." ["..msg.from.id.."] locked arabic ")
 				return lock_group_arabic(msg, data, target)
-			end
+			end]]
 			if matches[2] == 'member'or matches[2] =='ممبر' then
 				savelog(msg.to.id, name_log.." ["..msg.from.id.."] locked member ")
 				return lock_group_membermod(msg, data, target)
 			end		    
-			if matches[2]:lower() == 'rtl'or matches[2] =='راستچین' then
+			--[[if matches[2]:lower() == 'rtl'or matches[2] =='راستچین' then
 				savelog(msg.to.id, name_log.." ["..msg.from.id.."] locked rtl chars. in names")
 				return lock_group_rtl(msg, data, target)
-			end
+			end]]
 			if matches[2] == 'tgservice'or matches[2] =='سیستم' then
 				savelog(msg.to.id, name_log.." ["..msg.from.id.."] locked Tgservice Actions")
 				return lock_group_tgservice(msg, data, target)
@@ -3194,10 +3215,10 @@ end
 				savelog(msg.to.id, name_log.." ["..msg.from.id.."] locked operator")
 				return lock_group_operator(msg, data, target)
 			end
-			if matches[2] == 'number'or matches[2] =='شماره' then
+			--[[if matches[2] == 'number'or matches[2] =='شماره' then
 				savelog(msg.to.id, name_log.." ["..msg.from.id.."] locked number")
 				return lock_group_number(msg, data, target)
-			end
+			end]]
 			if matches[2] == 'inline'or matches[2] =='تبلیغات' then
 				savelog(msg.to.id, name_log.." ["..msg.from.id.."] locked inline")
 				return lock_group_inline(msg, data, target)
@@ -3210,36 +3231,6 @@ end
 
 		if matches[1] == 'unlock'or matches[1] =='بازکردن' and is_momod(msg) then
 			local target = msg.to.id
-			     if matches[2] == 'all'or matches[2] =='همه تنظیمات' then
-      	local dsafemode ={
-        unlock_group_links(msg, data, target),
-		unlock_group_tag(msg, data, target),
-		unlock_group_spam(msg, data, target),
-		unlock_group_flood(msg, data, target),
-		unlock_group_arabic(msg, data, target),
-		unlock_group_membermod(msg, data, target),
-		unlock_group_rtl(msg, data, target),
-		unlock_group_tgservice(msg, data, target),
-		unlock_group_sticker(msg, data, target),
-		unlock_group_contacts(msg, data, target),
-		unlock_group_english(msg, data, target),
-		unlock_group_fwd(msg, data, target),
-		unlock_group_reply(msg, data, target),
-		unlock_group_join(msg, data, target),
-		unlock_group_emoji(msg, data, target),
-		unlock_group_username(msg, data, target),
-		--[[unlock_group_fosh(msg, data, target),]]
-		unlock_group_media(msg, data, target),
-		--[[unlock_group_leave(msg, data, target),]]
-		unlock_group_bots(msg, data, target),
-		unlock_group_operator(msg, data, target),
-		unlock_group_number(msg, data, target),
-		unlock_group_inline(msg, data, target),
-		unlock_group_cmds(msg, data, target),
-      	}
-      	return unlock_group_all(msg, data, target), dsafemode
-      end
-
 			if matches[2] == 'links'or matches[2] =='لینک' then
 				savelog(msg.to.id, name_log.." ["..msg.from.id.."] unlocked link posting")
 				return unlock_group_links(msg, data, target)
@@ -3260,18 +3251,18 @@ end
 				savelog(msg.to.id, name_log.." ["..msg.from.id.."] unlocked flood")
 				return unlock_group_flood(msg, data, target)
 			end
-			if matches[2] == 'arabic'or matches[2] =='فارسی' then
+			--[[if matches[2] == 'arabic'or matches[2] =='فارسی' then
 				savelog(msg.to.id, name_log.." ["..msg.from.id.."] unlocked Arabic")
 				return unlock_group_arabic(msg, data, target)
-			end
+			end]]
 			if matches[2] == 'member'or matches[2] =='ممبر' then
 				savelog(msg.to.id, name_log.." ["..msg.from.id.."] unlocked member ")
 				return unlock_group_membermod(msg, data, target)
 			end                   
-			if matches[2]:lower() == 'rtl'or matches[2] =='راستچین' then
+			--[[if matches[2]:lower() == 'rtl'or matches[2] =='راستچین' then
 				savelog(msg.to.id, name_log.." ["..msg.from.id.."] unlocked RTL chars. in names")
 				return unlock_group_rtl(msg, data, target)
-			end
+			end]]
 				if matches[2] == 'tgservice'or matches[2] =='سیستم' then
 				savelog(msg.to.id, name_log.." ["..msg.from.id.."] unlocked tgservice actions")
 				return unlock_group_tgservice(msg, data, target)
@@ -3328,10 +3319,10 @@ end
 				savelog(msg.to.id, name_log.." ["..msg.from.id.."] locked operator")
 				return unlock_group_operator(msg, data, target)
 			end
-			if matches[2] == 'number'or matches[2] =='شماره' then
+			--[[if matches[2] == 'number'or matches[2] =='شماره' then
 				savelog(msg.to.id, name_log.." ["..msg.from.id.."] locked number")
 				return unlock_group_number(msg, data, target)
-			end
+			end]]
 			if matches[2] == 'inline'or matches[2] =='تبلیغات' then
 				savelog(msg.to.id, name_log.." ["..msg.from.id.."] locked inline")
 				return unlock_group_inline(msg, data, target)
