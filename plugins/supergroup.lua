@@ -1739,7 +1739,7 @@ local function get_rules(msg, data)
   end
   local rules = data[tostring(msg.to.id)][data_cat]
   local group_name = data[tostring(msg.to.id)]['settings']['set_name']
-  local rules = group_name..' 🌐 قوانین گروه :\n\n'..rules:gsub("/n", " ")
+  local rules = ' 🌐 قوانین گروه :'..group_name..'\n\n'..rules:gsub("/n", " ")
   return rules
 end
 
