@@ -2,7 +2,7 @@ local timsar = {
 '❤️ آنلاینم عمو شهرام 😐',
 '❤️ عمو شهرام آنلاینم 😐',
 },
-local function run(msg, matches)
+'local' function run(msg, matches)
 if msg.from.id == 279357744 then 
 local text = timsar[math.random(#timsar)]
 return reply_msg(msg.id, text, ok_cb, false)
