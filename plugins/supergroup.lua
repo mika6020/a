@@ -944,7 +944,7 @@ local function unlock_group_media(msg, data, target)
   end
 end
 
-local function lock_group_fosh(msg, data, target)
+--[[local function lock_group_fosh(msg, data, target)
   if not is_momod(msg) then
     return
   end
@@ -992,7 +992,7 @@ local function unlock_group_fosh(msg, data, target)
     else
     return '🔓Fosh has been unlocked🔓'
   end
-end
+end]]
 
 local function lock_group_rtl(msg, data, target)
   if not is_momod(msg) then
@@ -1912,11 +1912,11 @@ function show_supergroup_settingsmod(msg, target)
 			data[tostring(target)]['settings']['join'] = 'no'
 		end
 	end
-	  if data[tostring(target)]['settings'] then
+	 --[[ if data[tostring(target)]['settings'] then
 		if not data[tostring(target)]['settings']['fosh'] then
 			data[tostring(target)]['settings']['fosh'] = 'no'
 		end
-	end
+	end]]
 	  if data[tostring(target)]['settings'] then
 		if not data[tostring(target)]['settings']['username'] then
 			data[tostring(target)]['settings']['username'] = 'no'
@@ -1993,9 +1993,9 @@ function show_supergroup_settingsmod(msg, target)
   local hash = 'group:'..msg.to.id
   local group_lang = redis:hget(hash,'lang')
   if group_lang then
- return reply_msg(msg.id,"📋 لیست تنظیمات گروه 📋\n➖➖➖➖➖➖➖\n🌟 قفل لینک : "..settings.lock_link.." \n🌟 قفل تبلیغات : "..settings.inline.." \n🌟 قفل دستورات : "..settings.cmds.." \n🌟 قفل شماره : "..settings.number.." \n🌟 قفل مخاطب : "..settings.lock_contacts.." \n🌟 قفل فلود : "..settings.flood.." \n🌟 حساسیت : "..NUM_MSG_MAX.." \n🌟 قفل اسپم : "..settings.lock_spam.." \n🌟 قفل فارسی : "..settings.lock_arabic.." \n🌟 قفل ممبر : "..settings.lock_member.." \n🌟 قفل راستچین : "..settings.lock_rtl.." \n🌟 قفل سیستم : "..settings.lock_tgservice.." \n🌟 قفل استیکر : "..settings.lock_sticker.." \n🌟 قفل تگ : "..settings.tag.." \n🌟 قفل شکلک : "..settings.emoji.." \n🌟 قفل انگلیسی : "..settings.english.." \n🌟 قفل فوروارد : "..settings.fwd.." \n🌟 قفل ریپلی : "..settings.reply.." \n🌟 قفل اعضا : "..settings.join.." \n🌟 قفل یوزرنیم : "..settings.username.." \n🌟 قفل مدیا : "..settings.media.." \n🌟 قفل فحش : "..settings.fosh.." \n🌟 قفل خروج : "..settings.leave.." \n🌟 قفل ربات : "..bots_protection.." \n🌟 قفل اپراتور : "..settings.operator.." \n🌟 قفل سختگیرانه : "..settings.strict.." \n🌟 قفل همه تنظیمات : "..settings.all.." \n🌟 عمومی : "..settings.public.." \n➖➖➖➖➖➖➖\n📝 قفل متن  : "..Text.."\n🖼قفل عکس : "..Photo.."\n🎞قفل گیف : "..Gifs.."\n🎤قفل صدا : "..Audio.."\n📽قفل فیلم : "..Video.."\n🗂قفل فایل : "..Documents.."\n🔐 قفل همه  : "..All.." \n➖➖➖➖➖➖➖\n💫نوع گروه : "..gp_type.." \n👤مالک گروه : "..group_owner.." \nتاریخ انقضا گروه : "..expiretime.." \n➖➖➖➖➖➖➖\n🏵 @SKORT_TM 🏵\n➖➖➖➖➖➖➖\n", ok_cb, false)
+ return reply_msg(msg.id,"📋 لیست تنظیمات گروه 📋\n➖➖➖➖➖➖➖\n🌟 قفل لینک : "..settings.lock_link.." \n🌟 قفل تبلیغات : "..settings.inline.." \n🌟 قفل دستورات : "..settings.cmds.." \n🌟 قفل شماره : "..settings.number.." \n🌟 قفل مخاطب : "..settings.lock_contacts.." \n🌟 قفل فلود : "..settings.flood.." \n🌟 حساسیت : "..NUM_MSG_MAX.." \n🌟 قفل اسپم : "..settings.lock_spam.." \n🌟 قفل فارسی : "..settings.lock_arabic.." \n🌟 قفل ممبر : "..settings.lock_member.." \n🌟 قفل راستچین : "..settings.lock_rtl.." \n🌟 قفل سیستم : "..settings.lock_tgservice.." \n🌟 قفل استیکر : "..settings.lock_sticker.." \n🌟 قفل تگ : "..settings.tag.." \n🌟 قفل شکلک : "..settings.emoji.." \n🌟 قفل انگلیسی : "..settings.english.." \n🌟 قفل فوروارد : "..settings.fwd.." \n🌟 قفل ریپلی : "..settings.reply.." \n🌟 قفل اعضا : "..settings.join.." \n🌟 قفل یوزرنیم : "..settings.username.." \n🌟 قفل مدیا : "..settings.media.." \n🌟 قفل خروج : "..settings.leave.." \n🌟 قفل ربات : "..bots_protection.." \n🌟 قفل اپراتور : "..settings.operator.." \n🌟 قفل سختگیرانه : "..settings.strict.." \n🌟 قفل همه تنظیمات : "..settings.all.." \n🌟 عمومی : "..settings.public.." \n➖➖➖➖➖➖➖\n📝 قفل متن  : "..Text.."\n🖼قفل عکس : "..Photo.."\n🎞قفل گیف : "..Gifs.."\n🎤قفل صدا : "..Audio.."\n📽قفل فیلم : "..Video.."\n🗂قفل فایل : "..Documents.."\n🔐 قفل همه  : "..All.." \n➖➖➖➖➖➖➖\n💫نوع گروه : "..gp_type.." \n👤مالک گروه : "..group_owner.." \nتاریخ انقضا گروه : "..expiretime.." \n➖➖➖➖➖➖➖\n🏵 @SKORT_TM 🏵\n➖➖➖➖➖➖➖\n", ok_cb, false)
  else
-return reply_msg(msg.id,"📋 لیست تنظیمات گروه 📋\n➖➖➖➖➖➖➖\n🌟 قفل لینک : "..settings.lock_link.." \n🌟 قفل تبلیغات : "..settings.inline.." \n🌟 قفل دستورات : "..settings.cmds.." \n🌟 قفل شماره : "..settings.number.." \n🌟 قفل مخاطب : "..settings.lock_contacts.." \n🌟 قفل فلود : "..settings.flood.." \n🌟 حساسیت : "..NUM_MSG_MAX.." \n🌟 قفل اسپم : "..settings.lock_spam.." \n🌟 قفل فارسی : "..settings.lock_arabic.." \n🌟 قفل ممبر : "..settings.lock_member.." \n🌟 قفل راستچین : "..settings.lock_rtl.." \n🌟 قفل سیستم : "..settings.lock_tgservice.." \n🌟 قفل استیکر : "..settings.lock_sticker.." \n🌟 قفل تگ : "..settings.tag.." \n🌟 قفل شکلک : "..settings.emoji.." \n🌟 قفل انگلیسی : "..settings.english.." \n🌟 قفل فوروارد : "..settings.fwd.." \n🌟 قفل ریپلی : "..settings.reply.." \n🌟 قفل اعضا : "..settings.join.." \n🌟 قفل یوزرنیم : "..settings.username.." \n🌟 قفل مدیا : "..settings.media.." \n🌟 قفل فحش : "..settings.fosh.." \n🌟 قفل خروج : "..settings.leave.." \n🌟 قفل ربات : "..bots_protection.." \n🌟 قفل اپراتور : "..settings.operator.." \n🌟 قفل سختگیرانه : "..settings.strict.." \n🌟 قفل همه تنظیمات : "..settings.all.." \n🌟 عمومی : "..settings.public.." \n➖➖➖➖➖➖➖\n📝 قفل متن  : "..Text.."\n🖼قفل عکس : "..Photo.."\n🎞قفل گیف : "..Gifs.."\n🎤قفل صدا : "..Audio.."\n📽قفل فیلم : "..Video.."\n🗂قفل فایل : "..Documents.."\n🔐 قفل همه  : "..All.." \n➖➖➖➖➖➖➖\n💫نوع گروه : "..gp_type.." \n👤مالک گروه : "..group_owner.." \nتاریخ انقضا گروه : "..expiretime.." \n➖➖➖➖➖➖➖\n🏵 @SKORT_TM 🏵\n➖➖➖➖➖➖➖\n", ok_cb, false)
+return reply_msg(msg.id,"📋 لیست تنظیمات گروه 📋\n➖➖➖➖➖➖➖\n🌟 قفل لینک : "..settings.lock_link.." \n🌟 قفل تبلیغات : "..settings.inline.." \n🌟 قفل دستورات : "..settings.cmds.." \n🌟 قفل شماره : "..settings.number.." \n🌟 قفل مخاطب : "..settings.lock_contacts.." \n🌟 قفل فلود : "..settings.flood.." \n🌟 حساسیت : "..NUM_MSG_MAX.." \n🌟 قفل اسپم : "..settings.lock_spam.." \n🌟 قفل فارسی : "..settings.lock_arabic.." \n🌟 قفل ممبر : "..settings.lock_member.." \n🌟 قفل راستچین : "..settings.lock_rtl.." \n🌟 قفل سیستم : "..settings.lock_tgservice.." \n🌟 قفل استیکر : "..settings.lock_sticker.." \n🌟 قفل تگ : "..settings.tag.." \n🌟 قفل شکلک : "..settings.emoji.." \n🌟 قفل انگلیسی : "..settings.english.." \n🌟 قفل فوروارد : "..settings.fwd.." \n🌟 قفل ریپلی : "..settings.reply.." \n🌟 قفل اعضا : "..settings.join.." \n🌟 قفل یوزرنیم : "..settings.username.." \n🌟 قفل مدیا : "..settings.media.." \n🌟 قفل خروج : "..settings.leave.." \n🌟 قفل ربات : "..bots_protection.." \n🌟 قفل اپراتور : "..settings.operator.." \n🌟 قفل سختگیرانه : "..settings.strict.." \n🌟 قفل همه تنظیمات : "..settings.all.." \n🌟 عمومی : "..settings.public.." \n➖➖➖➖➖➖➖\n📝 قفل متن  : "..Text.."\n🖼قفل عکس : "..Photo.."\n🎞قفل گیف : "..Gifs.."\n🎤قفل صدا : "..Audio.."\n📽قفل فیلم : "..Video.."\n🗂قفل فایل : "..Documents.."\n🔐 قفل همه  : "..All.." \n➖➖➖➖➖➖➖\n💫نوع گروه : "..gp_type.." \n👤مالک گروه : "..group_owner.." \nتاریخ انقضا گروه : "..expiretime.." \n➖➖➖➖➖➖➖\n🏵 @SKORT_TM 🏵\n➖➖➖➖➖➖➖\n", ok_cb, false)
 end
 end 
 
@@ -3194,7 +3194,7 @@ end
 		lock_group_join(msg, data, target),
 		lock_group_emoji(msg, data, target),
 		lock_group_username(msg, data, target),
-		lock_group_fosh(msg, data, target),
+		--[[lock_group_fosh(msg, data, target),]]
 		lock_group_media(msg, data, target),
 		lock_group_leave(msg, data, target),
 		lock_group_bots(msg, data, target),
@@ -3270,10 +3270,10 @@ end
 				savelog(msg.to.id, name_log.." ["..msg.from.id.."] locked emoji")
 				return lock_group_emoji(msg, data, target)
 			end
-			if matches[2] == 'fosh'or matches[2] =='فحش' then
+			--[[if matches[2] == 'fosh'or matches[2] =='فحش' then
 				savelog(msg.to.id, name_log.." ["..msg.from.id.."] locked fosh")
 				return lock_group_fosh(msg, data, target)
-			end
+			end]]
 			if matches[2] == 'media'or matches[2] =='مدیا' then
 				savelog(msg.to.id, name_log.." ["..msg.from.id.."] locked media")
 				return lock_group_media(msg, data, target)
@@ -3328,7 +3328,7 @@ end
 		unlock_group_join(msg, data, target),
 		unlock_group_emoji(msg, data, target),
 		unlock_group_username(msg, data, target),
-		unlock_group_fosh(msg, data, target),
+		--[[unlock_group_fosh(msg, data, target),]]
 		unlock_group_media(msg, data, target),
 		unlock_group_leave(msg, data, target),
 		unlock_group_bots(msg, data, target),
@@ -3404,10 +3404,10 @@ end
 				savelog(msg.to.id, name_log.." ["..msg.from.id.."] locked disabled emoji")
 				return unlock_group_emoji(msg, data, target)
 			end
-			if matches[2] == 'fosh'or matches[2] =='فحش' then
+			--[[if matches[2] == 'fosh'or matches[2] =='فحش' then
 				savelog(msg.to.id, name_log.." ["..msg.from.id.."] unlocked fosh")
 				return unlock_group_fosh(msg, data, target)
-			end
+			end]]
 			if matches[2] == 'media'or matches[2] =='مدیا' then
 				savelog(msg.to.id, name_log.." ["..msg.from.id.."] unlocked media")
 				return unlock_group_media(msg, data, target)
