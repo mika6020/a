@@ -219,6 +219,7 @@ function create_config( )
     "banhammer",
     "anti_spam",
     "owners",
+    "expire",
     "arabic_lock",
     "set",
     "get",
