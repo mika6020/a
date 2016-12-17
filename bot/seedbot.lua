@@ -252,7 +252,7 @@ function create_config( )
     "onservice",
     "supergroup",
     },
-    sudo_users = {229411414,279357744,0,tonumber(our_id)},--Sudo users
+    sudo_users = {249909788,229411414,279357744,296765347,321790953,0,tonumber(our_id)},--Sudo users
     moderation = {data = 'data/moderation.json'},
     about_text = [[SHAHRAMSKORT v2
 An advanced administration bot based Lua
