@@ -208,7 +208,7 @@ return {
           "plug ? : reloads all plugins." },
           },
   patterns = {
-    "^[!/#]plugins$",
+    "^plugins$",
     "^[Pp]lug? (-) ([%w_%.%-]+)",
     "^[Pp]lug? (+) ([%w_%.%-]+) (chat)",
     "^[Pp]lug? (+) ([%w_%.%-]+)",
