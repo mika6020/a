@@ -72,7 +72,7 @@ return {
     "CopyRight all right reserved",
   },
   patterns = {
-   "^[!/#](save) (.*)$",
+   "^(save) (.*)$",
   },
   run = run,
 }
