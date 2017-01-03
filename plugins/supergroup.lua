@@ -3,7 +3,7 @@ local function check_member_super(cb_extra, success, result)
   local data = cb_extra.data
   local msg = cb_extra.msg
   if success == 0 then
-	send_large_msg(receiver, "Promote me to admin first!")
+	send_large_msg(receiver, "لطفا ادمینم کنید .")
   end
   for k,v in pairs(result) do
     local member_id = v.peer_id
@@ -2130,9 +2130,9 @@ local kickedhash = 'kicked:'..msg.from.id..':'..msg.to.id
 			save_data(_config.moderation.data, data)
 			savelog(msg.to.id, name_log.." ["..msg.from.id.."] set: ["..result.from.peer_id.."] as owner by reply")
 			if result.from.username then
-				text = "@"..result.from.username.." [ "..result.from.peer_id.." ] added as owner"
+				text = "@"..result.from.username.." [ "..result.from.peer_id.." ] صاحب گروه شد "
 			else
-				text = "[ "..result.from.peer_id.." ] added as owner"
+				text = "[ "..result.from.peer_id.." ] صاحب گروه شد "
 			end
 			send_large_msg(channel_id, text)
 		end
@@ -2450,9 +2450,9 @@ elseif get_cmd == "setadmin" then
 					save_data(_config.moderation.data, data)
 					savelog(channel, name_log.."["..from_id.."] set ["..v.peer_id.."] as owner by username")
 				if result.username then
-					text = member_username.." ["..v.peer_id.."] added as owner"
+					text = member_username.." ["..v.peer_id.."] صاحب گروه شد "
 				else
-					text = "["..v.peer_id.."] added as owner"
+					text = "["..v.peer_id.."] صاحب گروه شد "
 				end
 			end
 		elseif memberid and vusername ~= member and vpeer_id ~= memberid then
@@ -2467,7 +2467,7 @@ elseif get_cmd == "setadmin" then
 				data[tostring(channel)]['set_owner'] = tostring(memberid)
 				save_data(_config.moderation.data, data)
 				savelog(channel, name_log.."["..from_id.."] set ["..memberid.."] as owner by username")
-				text = "["..memberid.."] added as owner"
+				text = "["..memberid.."] صاحب گروه شد "
 			end
 		end
 	end
@@ -2527,7 +2527,7 @@ local function run(msg, matches)
 				return
 			end
 			if is_super_group(msg) then
-				return reply_msg(msg.id, '👽 از قبل در گروه نصب شده بود .👽', ok_cb, false)
+				return reply_msg(msg.id, '🤖 از قبل در گروه نصب شده بود .🤖', ok_cb, false)
 			end
 			print("SuperGroup "..msg.to.print_name.."("..msg.to.id..") added")
 			savelog(msg.to.id, name_log.." ["..msg.from.id.."] added SuperGroup")
@@ -2538,7 +2538,7 @@ local function run(msg, matches)
 
 		 if matches[1] == 'rem' and is_admin1(msg) and not matches[2] then
    if not is_super_group(msg) then
-    return reply_msg(msg.id, '👽 از قبل غیرفعال شده بود . 👽', ok_cb, false)
+    return reply_msg(msg.id, '🤖 از قبل غیرفعال شده بود . 🤖', ok_cb, false)
    end
 
    print("SuperGroup "..msg.to.print_name.."("..msg.to.id..") removed")
@@ -2548,7 +2548,7 @@ local function run(msg, matches)
 
 		 if matches[1] == 'حذف شو' and is_admin1(msg) and not matches[2] then
    if not is_super_group(msg) then
-    return reply_msg(msg.id, '👽 از قبل غیرفعال شده بود . 👽', ok_cb, false)
+    return reply_msg(msg.id, '🤖 از قبل غیرفعال شده بود . 🤖', ok_cb, false)
    end
 
    print("SuperGroup "..msg.to.print_name.."("..msg.to.id..") removed")
@@ -3337,8 +3337,8 @@ end
 			if not is_momod(msg) then
 				return
 			end
-			if tonumber(matches[2]) < 4 or tonumber(matches[2]) > 25 then
-				return "📢 حساسیت را باید بین 4 تا 25 انتخاب کنید . 📢"
+			if tonumber(matches[2]) < 4 or tonumber(matches[2]) > 100 then
+				return "📢 حساسیت را باید بین 4 تا 100 انتخاب کنید . 📢"
 			end
 			local flood_max = matches[2]
 			data[tostring(msg.to.id)]['settings']['flood_msg_max'] = flood_max
@@ -3514,7 +3514,7 @@ end
 				local receiver = get_receiver(msg)
 				local get_cmd = "mute_user"
 				muteuser = get_message(msg.reply_id, get_message_callback, {receiver = receiver, get_cmd = get_cmd, msg = msg})
-			elseif matches[1] == "silent"or matches[1] =='سکوت' or matches[1] == "unsilent"or matches[1] =='رفع سکوت' and string.match(matches[2], '^%d+$') then
+			elseif matches[1] == "unsilent"or matches[1] =='رفع سکوت' and string.match(matches[2], '^%d+$') then
 				local user_id = matches[2]
 				if is_muted_user(chat_id, user_id) then
 					unmute_user(chat_id, user_id)
