@@ -25,6 +25,7 @@ return {
 "(https://telegram.me/joinchat/%S+)(.*)",
 "[Tt][Ee][Ll][Ee][Gg][Rr][Aa][Mm](.*)",
 "(telegram.me)(.*)",
+"(t.me)(.*)",
 "(telegram.me/joinchat)(.*)",
   },
   run = run
