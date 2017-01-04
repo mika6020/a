@@ -12,7 +12,7 @@ local function run(msg, matches)
        local hash = 'muteall:'..msg.to.id
        if not matches[2] then
               redis:set(hash, true)
-             return "🔐 گروه قفل شد . 🔐\n🏵 @SKORT_TM 🏵\n"
+             return "🔐 گروه قفل شد . 🔐"
  else
 -- by @Cyrus0098 
 local hour = string.gsub(matches[2], 'h', '')
@@ -23,13 +23,13 @@ local second = string.gsub(matches[4], 's', '')
  local num3 = tonumber(second) 
 local num4 = tonumber(num1 + num2 + num3)
 redis:setex(hash, num4, true)
- return "🔐گروه قفل شد برای\nساعت⏰ : "..matches[2].."\nدقیقه🕰  : "..matches[3].." \nثانیه⏲   : "..matches[4].."\n⚠️لطفا از چت کردن و ارسال مطالب خودداری فرمایید ⚠️\n🏵 @SKORT_TM 🏵\n"
+ return "🔐گروه قفل شد برای\nساعت⏰ : "..matches[2].."\nدقیقه🕰  : "..matches[3].." \nثانیه⏲   : "..matches[4].."\n⚠️لطفا از چت کردن و ارسال مطالب خودداری فرمایید ⚠️"
  end
  end
 if matches[1] == 'بازکردن گروه' and is_momod(msg) then
                local hash = 'muteall:'..msg.to.id
         redis:del(hash)
-          return "🔓قفل گروه  باز شد .🔓\n🏵 @SKORT_TM 🏵\n"
+          return "🔓قفل گروه  باز شد .🔓"
   end
 end
 return {
