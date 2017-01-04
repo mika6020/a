@@ -182,9 +182,9 @@ local function lock_group_cmds(msg, data, target)
    local hash = 'group:'..msg.to.id
   local group_lang = redis:hget(hash,'lang')
   if group_lang then
-   return '🔐 قفل دستورات فعال بود .🔒\n🏵 @SKORT_TM 🏵\n'
+   return '🔐 قفل دستورات فعال بود .🔒'
    else
-    return '🔐 قفل دستورات فعال بود .🔒\n🏵 @SKORT_TM 🏵\n'
+    return '🔐 قفل دستورات فعال بود .🔒'
     end
     end
     data[tostring(target)]['settings']['cmds'] = 'yes'
@@ -192,9 +192,9 @@ local function lock_group_cmds(msg, data, target)
     local hash = 'group:'..msg.to.id
   local group_lang = redis:hget(hash,'lang')
   if group_lang then
-    return '🔐 قفل دستورات فعال شد .🔒\n🏵 @SKORT_TM 🏵\n'
+    return '🔐 قفل دستورات فعال شد .🔒'
      else
-    return '🔐 قفل دستورات فعال شد .🔒\n🏵 @SKORT_TM 🏵\n'
+    return '🔐 قفل دستورات فعال شد .🔒'
   end
 end
 
@@ -207,9 +207,9 @@ local function unlock_group_cmds(msg, data, target)
   local hash = 'group:'..msg.to.id
   local group_lang = redis:hget(hash,'lang')
   if group_lang then
-    return '🔐 قفل دستورات غیرفعال بود .🔓\n🏵 @SKORT_TM 🏵\n'
+    return '🔐 قفل دستورات غیرفعال بود .🔓'
     else 
-    return '🔐 قفل دستورات غیرفعال بود .🔓\n🏵 @SKORT_TM 🏵\n'
+    return '🔐 قفل دستورات غیرفعال بود .🔓'
     end
     end
     data[tostring(target)]['settings']['cmds'] = 'no'
@@ -217,9 +217,9 @@ local function unlock_group_cmds(msg, data, target)
     local hash = 'group:'..msg.to.id
   local group_lang = redis:hget(hash,'lang')
   if group_lang then
-    return '🔐 قفل دستورات غیرفعال شد .🔓\n🏵 @SKORT_TM 🏵\n'
+    return '🔐 قفل دستورات غیرفعال شد .🔓'
      else 
-     return '🔐 قفل دستورات غیرفعال شد .🔓\n🏵 @SKORT_TM 🏵\n'
+     return '🔐 قفل دستورات غیرفعال شد .🔓'
   end
 end
 
@@ -233,9 +233,9 @@ local function lock_group_inline(msg, data, target)
    local hash = 'group:'..msg.to.id
   local group_lang = redis:hget(hash,'lang')
   if group_lang then
-   return '🔐 قفل تبلیغات فعال بود .🔒\n🏵 @SKORT_TM 🏵\n'
+   return '🔐 قفل تبلیغات فعال بود .🔒'
    else
-    return '🔐 قفل تبلیغات فعال بود .🔒\n🏵 @SKORT_TM 🏵\n'
+    return '🔐 قفل تبلیغات فعال بود .🔒'
     end
     end
     data[tostring(target)]['settings']['inline'] = 'yes'
@@ -243,9 +243,9 @@ local function lock_group_inline(msg, data, target)
     local hash = 'group:'..msg.to.id
   local group_lang = redis:hget(hash,'lang')
   if group_lang then
-    return '🔐 قفل تبلیغات فعال شد .🔒\n🏵 @SKORT_TM 🏵\n'
+    return '🔐 قفل تبلیغات فعال شد .🔒'
      else
-    return '🔐 قفل تبلیغات فعال شد .🔒\n🏵 @SKORT_TM 🏵\n'
+    return '🔐 قفل تبلیغات فعال شد .🔒'
   end
 end
 
@@ -258,9 +258,9 @@ local function unlock_group_inline(msg, data, target)
   local hash = 'group:'..msg.to.id
   local group_lang = redis:hget(hash,'lang')
   if group_lang then
-    return '🔐 قفل تبلیغات غیرفعال بود .🔓\n🏵 @SKORT_TM 🏵\n'
+    return '🔐 قفل تبلیغات غیرفعال بود .🔓'
     else 
-    return '🔐 قفل تبلیغات غیرفعال بود .🔓\n🏵 @SKORT_TM 🏵\n'
+    return '🔐 قفل تبلیغات غیرفعال بود .🔓'
     end
     end
     data[tostring(target)]['settings']['inline'] = 'no'
@@ -268,9 +268,9 @@ local function unlock_group_inline(msg, data, target)
     local hash = 'group:'..msg.to.id
   local group_lang = redis:hget(hash,'lang')
   if group_lang then
-    return '🔐 قفل تبلیغات غیرفعال شد .🔓\n🏵 @SKORT_TM 🏵\n'
+    return '🔐 قفل تبلیغات غیرفعال شد .🔓'
      else 
-     return '🔐 قفل تبلیغات غیرفعال شد .🔓\n🏵 @SKORT_TM 🏵\n'
+     return '🔐 قفل تبلیغات غیرفعال شد .🔓'
   end
 end
 
@@ -334,9 +334,9 @@ local function lock_group_links(msg, data, target)
    local hash = 'group:'..msg.to.id
   local group_lang = redis:hget(hash,'lang')
   if group_lang then
-   return reply_msg(msg.id,'🔐 ضدلینک قفل بود .🔒\n🏵 @SKORT_TM 🏵\n', ok_cb, false)
+   return reply_msg(msg.id,'🔐 ضدلینک قفل بود .🔒', ok_cb, false)
    else
-    return reply_msg(msg.id,'🔐 ضدلینک قفل بود .🔒\n🏵 @SKORT_TM 🏵\n', ok_cb, false)
+    return reply_msg(msg.id,'🔐 ضدلینک قفل بود .🔒', ok_cb, false)
     end
     end
     data[tostring(target)]['settings']['lock_link'] = 'yes'
@@ -344,9 +344,9 @@ local function lock_group_links(msg, data, target)
     local hash = 'group:'..msg.to.id
   local group_lang = redis:hget(hash,'lang')
   if group_lang then
-  return reply_msg(msg.id,'🔐 ضدلینک قفل شد .🔒\n🏵 @SKORT_TM 🏵\n', ok_cb, false)
+  return reply_msg(msg.id,'🔐 ضدلینک قفل شد .🔒', ok_cb, false)
      else
-    return reply_msg(msg.id,'🔐 ضدلینک قفل شد .🔒\n🏵 @SKORT_TM 🏵\n', ok_cb, false)
+    return reply_msg(msg.id,'🔐 ضدلینک قفل شد .🔒', ok_cb, false)
   end
 end
 
@@ -359,9 +359,9 @@ local function unlock_group_links(msg, data, target)
   local hash = 'group:'..msg.to.id
   local group_lang = redis:hget(hash,'lang')
   if group_lang then
-   return reply_msg(msg.id,'🔐 ضدلینک غیرفعال بود .🔓\n🏵 @SKORT_TM 🏵\n', ok_cb, false)
+   return reply_msg(msg.id,'🔐 ضدلینک غیرفعال بود .🔓', ok_cb, false)
     else 
-   return reply_msg(msg.id,'🔐 ضدلینک غیرفعال بود .🔓\n🏵 @SKORT_TM 🏵\n', ok_cb, false)
+   return reply_msg(msg.id,'🔐 ضدلینک غیرفعال بود .🔓', ok_cb, false)
     end
     end
     data[tostring(target)]['settings']['lock_link'] = 'no'
@@ -369,9 +369,9 @@ local function unlock_group_links(msg, data, target)
     local hash = 'group:'..msg.to.id
   local group_lang = redis:hget(hash,'lang')
   if group_lang then
-    return reply_msg(msg.id,'🔐 قفل ضدلینک غیرفعال شد .🔓\n🏵 @SKORT_TM 🏵\n', ok_cb, false)
+    return reply_msg(msg.id,'🔐 قفل ضدلینک غیرفعال شد .🔓', ok_cb, false)
      else 
-   return reply_msg(msg.id,'🔐 قفل ضدلینک غیرفعال شد .🔓\n🏵 @SKORT_TM 🏵\n', ok_cb, false)
+   return reply_msg(msg.id,'🔐 قفل ضدلینک غیرفعال شد .🔓', ok_cb, false)
   end
 end
 
@@ -384,9 +384,9 @@ local function lock_group_all(msg, data, target)
     local hash = 'group:'..msg.to.id
   local group_lang = redis:hget(hash,'lang')
   if group_lang then
-	return '🔐 همه تنظیمات قفل بود .🔒\n🏵 @SKORT_TM 🏵\n'
+	return '🔐 همه تنظیمات قفل بود .🔒'
   else
-  return '🔐 همه تنظیمات قفل بود .🔒\n🏵 @SKORT_TM 🏵\n'
+  return '🔐 همه تنظیمات قفل بود .🔒'
   end
   end
     data[tostring(target)]['settings']['all'] = 'yes'
@@ -394,9 +394,9 @@ local function lock_group_all(msg, data, target)
      local hash = 'group:'..msg.to.id
   local group_lang = redis:hget(hash,'lang')
   if group_lang then
-	return '🔐 همه تنظیمات قفل شد .🔒\n🏵 @SKORT_TM 🏵\n'
+	return '🔐 همه تنظیمات قفل شد .🔒'
   else
-  retuen '🔐 همه تنظیمات قفل شد .🔒\n🏵 @SKORT_TM 🏵\n'
+  retuen '🔐 همه تنظیمات قفل شد .🔒'
   end
 end
 
@@ -409,9 +409,9 @@ local function unlock_group_all(msg, data, target)
   local hash = 'group:'..msg.to.id
   local group_lang = redis:hget(hash,'lang')
   if group_lang then   
-   return '🔐 همه تنظیمات غیرفعال بود .🔓\n🏵 @SKORT_TM 🏵\n'
+   return '🔐 همه تنظیمات غیرفعال بود .🔓'
   else
-  return '🔐 همه تنظیمات غیرفعال بود .🔓\n🏵 @SKORT_TM 🏵\n'
+  return '🔐 همه تنظیمات غیرفعال بود .🔓'
   end
   end
     data[tostring(target)]['settings']['all'] = 'no'
@@ -419,9 +419,9 @@ local function unlock_group_all(msg, data, target)
 local hash = 'group:'..msg.to.id
   local group_lang = redis:hget(hash,'lang')
   if group_lang then     
-  return '🔐 قفل همه تنظیمات غیرفعال شد .🔓\n🏵 @SKORT_TM 🏵\n'
+  return '🔐 قفل همه تنظیمات غیرفعال شد .🔓'
   else
-  return '🔐 قفل همه تنظیمات غیرفعال شد .🔓\n🏵 @SKORT_TM 🏵\n'
+  return '🔐 قفل همه تنظیمات غیرفعال شد .🔓'
   end
 end
 
@@ -435,9 +435,9 @@ local function lock_group_ax(msg, data, target)
   local hash = 'group:'..msg.to.id
   local group_lang = redis:hget(hash,'lang')
   if group_lang then 
-    return '🔐 ارسال عکس ممنوع بود .🔒\n🏵 @SKORT_TM 🏵\n'
+    return '🔐 ارسال عکس ممنوع بود .🔒'
   else
-  return '🔐 ارسال عکس ممنوع بود .🔒\n🏵 @SKORT_TM 🏵\n'
+  return '🔐 ارسال عکس ممنوع بود .🔒'
   end
   end
     data[tostring(target)]['settings']['lock_photo'] = 'yes'
@@ -445,9 +445,9 @@ local function lock_group_ax(msg, data, target)
     local hash = 'group:'..msg.to.id
   local group_lang = redis:hget(hash,'lang')
   if group_lang then 
-	return '🔐 ارسال عکس ممنوع شد .🔒\n🏵 @SKORT_TM 🏵\n'
+	return '🔐 ارسال عکس ممنوع شد .🔒'
   else
-  return '🔐 ارسال عکس ممنوع شد .🔒\n🏵 @SKORT_TM 🏵\n'
+  return '🔐 ارسال عکس ممنوع شد .🔒'
   end
 end
 
@@ -460,9 +460,9 @@ local function unlock_group_ax(msg, data, target)
   local hash = 'group:'..msg.to.id
   local group_lang = redis:hget(hash,'lang')
   if group_lang then 
-    return '🔐 ارسال عکس آزاد بود .🔓\n🏵 @SKORT_TM 🏵\n'
+    return '🔐 ارسال عکس آزاد بود .🔓'
   else
-  return '🔐 ارسال عکس آزاد بود .🔓\n🏵 @SKORT_TM 🏵\n'
+  return '🔐 ارسال عکس آزاد بود .🔓'
   end
   end
     data[tostring(target)]['settings']['lock_photo'] = 'no'
@@ -470,9 +470,9 @@ local function unlock_group_ax(msg, data, target)
   local hash = 'group:'..msg.to.id
   local group_lang = redis:hget(hash,'lang')
   if group_lang then    
-   return '🔐 ارسال عکس آزاد شد .🔓\n🏵 @SKORT_TM 🏵\n'
+   return '🔐 ارسال عکس آزاد شد .🔓'
   else 
-  return '🔐 ارسال عکس آزاد شد .🔓\n🏵 @SKORT_TM 🏵\n'
+  return '🔐 ارسال عکس آزاد شد .🔓'
   end
 end
 
@@ -485,9 +485,9 @@ local function lock_group_video(msg, data, target)
   local hash = 'group:'..msg.to.id
   local group_lang = redis:hget(hash,'lang')
   if group_lang then 
-    return '🔐 ارسال فیلم ممنوع بود .🔒\n🏵 @SKORT_TM 🏵\n'
+    return '🔐 ارسال فیلم ممنوع بود .🔒'
   else
-  return '🔐 ارسال فیلم ممنوع بود .🔒\n🏵 @SKORT_TM 🏵\n'
+  return '🔐 ارسال فیلم ممنوع بود .🔒'
   end
   end
     data[tostring(target)]['settings']['lock_video'] = 'yes'
@@ -495,9 +495,9 @@ local function lock_group_video(msg, data, target)
     local hash = 'group:'..msg.to.id
   local group_lang = redis:hget(hash,'lang')
   if group_lang then 
-	return '🔐 ارسال فیلم ممنوع شد .🔒\n🏵 @SKORT_TM 🏵\n'
+	return '🔐 ارسال فیلم ممنوع شد .🔒'
   else
-  return '🔐 ارسال فیلم ممنوع شد .🔒\n🏵 @SKORT_TM 🏵\n'
+  return '🔐 ارسال فیلم ممنوع شد .🔒'
   end
 end
 
@@ -510,9 +510,9 @@ local function unlock_group_video(msg, data, target)
  local hash = 'group:'..msg.to.id
   local group_lang = redis:hget(hash,'lang')
   if group_lang then    
-   return '🔐 ارسال فیلم آزاد بود .🔓\n🏵 @SKORT_TM 🏵\n'
+   return '🔐 ارسال فیلم آزاد بود .🔓'
   else
-  return '🔐 ارسال فیلم آزاد بود .🔓\n🏵 @SKORT_TM 🏵\n'
+  return '🔐 ارسال فیلم آزاد بود .🔓'
   end
   end
     data[tostring(target)]['settings']['lock_video'] = 'no'
@@ -520,9 +520,9 @@ local function unlock_group_video(msg, data, target)
      local hash = 'group:'..msg.to.id
   local group_lang = redis:hget(hash,'lang')
   if group_lang then 
-	return '🔐 ارسال فیلم آزاد شد .🔓\n🏵 @SKORT_TM 🏵\n'
+	return '🔐 ارسال فیلم آزاد شد .🔓'
     else
-	return '🔐 ارسال فیلم آزاد شد .🔓\n🏵 @SKORT_TM 🏵\n'
+	return '🔐 ارسال فیلم آزاد شد .🔓'
   end
 end
 
@@ -535,9 +535,9 @@ local function lock_group_audio(msg, data, target)
     local hash = 'group:'..msg.to.id
   local group_lang = redis:hget(hash,'lang')
   if group_lang then    
-   return '🔐 ارسال صدا ممنوع بود .🔒\n🏵 @SKORT_TM 🏵\n'
+   return '🔐 ارسال صدا ممنوع بود .🔒'
   else
-  return '🔐 ارسال صدا ممنوع بود .🔒\n🏵 @SKORT_TM 🏵\n'
+  return '🔐 ارسال صدا ممنوع بود .🔒'
   end 
   end
     data[tostring(target)]['settings']['lock_audio'] = 'yes'
@@ -545,9 +545,9 @@ local function lock_group_audio(msg, data, target)
      local hash = 'group:'..msg.to.id
   local group_lang = redis:hget(hash,'lang')
   if group_lang then 
-	return '🔐 ارسال صدا ممنوع شد .🔒\n🏵 @SKORT_TM 🏵\n'
+	return '🔐 ارسال صدا ممنوع شد .🔒'
     else
-	return '🔐 ارسال صدا ممنوع شد .🔒\n🏵 @SKORT_TM 🏵\n'
+	return '🔐 ارسال صدا ممنوع شد .🔒'
   end
 end
 
@@ -560,9 +560,9 @@ local function unlock_group_audio(msg, data, target)
  local hash = 'group:'..msg.to.id
   local group_lang = redis:hget(hash,'lang')
   if group_lang then    
-   return '🔐 ارسال صدا آزاد بود .🔓\n🏵 @SKORT_TM 🏵\n'
+   return '🔐 ارسال صدا آزاد بود .🔓'
   else
-  return '🔐 ارسال صدا آزاد بود .🔓\n🏵 @SKORT_TM 🏵\n'
+  return '🔐 ارسال صدا آزاد بود .🔓'
   end 
   end
     data[tostring(target)]['settings']['lock_audio'] = 'no'
@@ -570,9 +570,9 @@ local function unlock_group_audio(msg, data, target)
      local hash = 'group:'..msg.to.id
   local group_lang = redis:hget(hash,'lang')
   if group_lang then 
-	return '🔐 ارسال صدا آزاد شد .🔓\n🏵 @SKORT_TM 🏵\n'
+	return '🔐 ارسال صدا آزاد شد .🔓'
   else
-  return '🔐 ارسال صدا آزاد شد .🔓\n🏵 @SKORT_TM 🏵\n'
+  return '🔐 ارسال صدا آزاد شد .🔓'
   end
 end
 
@@ -586,9 +586,9 @@ local function lock_group_gif(msg, data, target)
      local hash = 'group:'..msg.to.id
   local group_lang = redis:hget(hash,'lang')
   if group_lang then 
-	return '🔐 ارسال گیف ممنوع بود .🔒\n🏵 @SKORT_TM 🏵\n'
+	return '🔐 ارسال گیف ممنوع بود .🔒'
   else
-  return '🔐 ارسال گیف ممنوع بود .🔒\n🏵 @SKORT_TM 🏵\n'
+  return '🔐 ارسال گیف ممنوع بود .🔒'
   end 
   end
     data[tostring(target)]['settings']['lock_gifs'] = 'yes'
@@ -596,9 +596,9 @@ local function lock_group_gif(msg, data, target)
      local hash = 'group:'..msg.to.id
   local group_lang = redis:hget(hash,'lang')
   if group_lang then 
-	return '🔐 ارسال گیف ممنوع شد .🔒\n🏵 @SKORT_TM 🏵\n'
+	return '🔐 ارسال گیف ممنوع شد .🔒'
    else
-   return '🔐 ارسال گیف ممنوع شد .🔒\n🏵 @SKORT_TM 🏵\n'
+   return '🔐 ارسال گیف ممنوع شد .🔒'
   end
 end
 
@@ -611,9 +611,9 @@ local function unlock_group_gif(msg, data, target)
      local hash = 'group:'..msg.to.id
   local group_lang = redis:hget(hash,'lang')
   if group_lang then    
-   return '🔐 ارسال گیف آزاد بود .🔓\n🏵 @SKORT_TM 🏵\n'
+   return '🔐 ارسال گیف آزاد بود .🔓'
   else
-  return '🔐 ارسال گیف آزاد بود .🔓\n🏵 @SKORT_TM 🏵\n'
+  return '🔐 ارسال گیف آزاد بود .🔓'
   end 
   end
     data[tostring(target)]['settings']['lock_gif'] = 'no'
@@ -621,9 +621,9 @@ local function unlock_group_gif(msg, data, target)
      local hash = 'group:'..msg.to.id
   local group_lang = redis:hget(hash,'lang')
   if group_lang then 
-	return '🔐 ارسال گیف آزاد شد .🔓\n🏵 @SKORT_TM 🏵\n'
+	return '🔐 ارسال گیف آزاد شد .🔓'
       else
-  return '🔐 ارسال گیف آزاد شد .🔓\n🏵 @SKORT_TM 🏵\n'	  
+  return '🔐 ارسال گیف آزاد شد .🔓'	  
   end
 end
 
@@ -686,9 +686,9 @@ local function lock_group_operator(msg, data, target)
   local hash = 'group:'..msg.to.id
   local group_lang = redis:hget(hash,'lang')
   if group_lang then
-  return '🔐 قفل اپراتور فعال بود .🔒\n🏵 @SKORT_TM 🏵\n'
+  return '🔐 قفل اپراتور فعال بود .🔒'
   else
-    return '🔐 قفل اپراتور فعال بود .🔒\n🏵 @SKORT_TM 🏵\n'
+    return '🔐 قفل اپراتور فعال بود .🔒'
   end
   end
     data[tostring(target)]['settings']['operator'] = 'yes'
@@ -696,9 +696,9 @@ local function lock_group_operator(msg, data, target)
     local hash = 'group:'..msg.to.id
   local group_lang = redis:hget(hash,'lang')
   if group_lang then
-  return '🔐 قفل اپراتور فعال شد .🔒\n🏵 @SKORT_TM 🏵\n'
+  return '🔐 قفل اپراتور فعال شد .🔒'
   else
-    return '🔐 قفل اپراتور فعال شد .🔒\n🏵 @SKORT_TM 🏵\n'
+    return '🔐 قفل اپراتور فعال شد .🔒'
   end
 end
 
@@ -711,9 +711,9 @@ local function unlock_group_operator(msg, data, target)
   local hash = 'group:'..msg.to.id
   local group_lang = redis:hget(hash,'lang')
   if group_lang then
-  return '🔐 قفل اپراتور غیرفعال بود .🔓\n🏵 @SKORT_TM 🏵\n'
+  return '🔐 قفل اپراتور غیرفعال بود .🔓'
   else
-    return '🔐 قفل اپراتور غیرفعال بود .🔓\n🏵 @SKORT_TM 🏵\n'
+    return '🔐 قفل اپراتور غیرفعال بود .🔓'
   end
   end
     data[tostring(target)]['settings']['operator'] = 'no'
@@ -721,9 +721,9 @@ local function unlock_group_operator(msg, data, target)
     local hash = 'group:'..msg.to.id
   local group_lang = redis:hget(hash,'lang')
   if group_lang then
-  return '🔐 قفل اپراتور غیرفعال شد .🔓\n🏵 @SKORT_TM 🏵\n'
+  return '🔐 قفل اپراتور غیرفعال شد .🔓'
   else
-    return '🔐 قفل اپراتور غیرفعال شد .🔓\n🏵 @SKORT_TM 🏵\n'
+    return '🔐 قفل اپراتور غیرفعال شد .🔓'
   end
 end
 
@@ -737,9 +737,9 @@ local function lock_group_reply(msg, data, target)
   local hash = 'group:'..msg.to.id
   local group_lang = redis:hget(hash,'lang')
   if group_lang then
-  retuen '🔐 قفل ریپلی فعال بود .🔒\n🏵 @SKORT_TM 🏵\n'
+  retuen '🔐 قفل ریپلی فعال بود .🔒'
   else
-    return '🔐 قفل ریپلی فعال بود .🔒\n🏵 @SKORT_TM 🏵\n'
+    return '🔐 قفل ریپلی فعال بود .🔒'
   end
   end
     data[tostring(target)]['settings']['reply'] = 'yes'
@@ -747,9 +747,9 @@ local function lock_group_reply(msg, data, target)
     local hash = 'group:'..msg.to.id
   local group_lang = redis:hget(hash,'lang')
   if group_lang then
-  return '🔐 قفل ریپلی فعال شد .🔒\n🏵 @SKORT_TM 🏵\n'
+  return '🔐 قفل ریپلی فعال شد .🔒'
   else
-    return '🔐 قفل ریپلی فعال شد .🔒\n🏵 @SKORT_TM 🏵\n'
+    return '🔐 قفل ریپلی فعال شد .🔒'
   end
 end
 
@@ -762,9 +762,9 @@ local function unlock_group_reply(msg, data, target)
   local hash = 'group:'..msg.to.id
   local group_lang = redis:hget(hash,'lang')
   if group_lang then
-  return '🔐 قفل ریپلی غیرفعال بود .🔓\n🏵 @SKORT_TM 🏵\n'
+  return '🔐 قفل ریپلی غیرفعال بود .🔓'
   else
-    return '🔐 قفل ریپلی غیرفعال بود .🔓\n🏵 @SKORT_TM 🏵\n'
+    return '🔐 قفل ریپلی غیرفعال بود .🔓'
   end
   end
     data[tostring(target)]['settings']['reply'] = 'no'
@@ -772,9 +772,9 @@ local function unlock_group_reply(msg, data, target)
     local hash = 'group:'..msg.to.id
   local group_lang = redis:hget(hash,'lang')
   if group_lang then
-  return '🔐 قفل ریپلی غیرفعال شد .🔓\n🏵 @SKORT_TM 🏵\n'
+  return '🔐 قفل ریپلی غیرفعال شد .🔓'
   else
-    return '🔐 قفل ریپلی غیرفعال شد .🔓\n🏵 @SKORT_TM 🏵\n'
+    return '🔐 قفل ریپلی غیرفعال شد .🔓'
   end
 end
 
@@ -787,9 +787,9 @@ local function lock_group_username(msg, data, target)
   local hash = 'group:'..msg.to.id
   local group_lang = redis:hget(hash,'lang')
   if group_lang then
-  return '🔐 قفل یوزرنیم (@) فعال بود .🔒\n🏵 @SKORT_TM 🏵\n'
+  return '🔐 قفل یوزرنیم (@) فعال بود .🔒'
   else
-    return '🔐 قفل یوزرنیم (@) فعال بود .🔒\n🏵 @SKORT_TM 🏵\n'
+    return '🔐 قفل یوزرنیم (@) فعال بود .🔒'
   end
   end
     data[tostring(target)]['settings']['username'] = 'yes'
@@ -797,9 +797,9 @@ local function lock_group_username(msg, data, target)
     local hash = 'group:'..msg.to.id
   local group_lang = redis:hget(hash,'lang')
   if group_lang then
-  return '🔐 قفل یوزرنیم (@) فعال شد .🔒\n🏵 @SKORT_TM 🏵\n'
+  return '🔐 قفل یوزرنیم (@) فعال شد .🔒'
   else
-    return '🔐 قفل یوزرنیم (@) فعال شد .🔒\n🏵 @SKORT_TM 🏵\n'
+    return '🔐 قفل یوزرنیم (@) فعال شد .🔒'
   end
 end
 
@@ -812,9 +812,9 @@ local function unlock_group_username(msg, data, target)
   local hash = 'group:'..msg.to.id
   local group_lang = redis:hget(hash,'lang')
   if group_lang then
-  return '🔐 قفل یوزرنیم (@) غیرفعال بود .🔓\n🏵 @SKORT_TM 🏵\n'
+  return '🔐 قفل یوزرنیم (@) غیرفعال بود .🔓'
   else
-    return '🔐 قفل یوزرنیم (@) غیرفعال بود .🔓\n🏵 @SKORT_TM 🏵\n'
+    return '🔐 قفل یوزرنیم (@) غیرفعال بود .🔓'
   end
   end
     data[tostring(target)]['settings']['username'] = 'no'
@@ -822,9 +822,9 @@ local function unlock_group_username(msg, data, target)
     local hash = 'group:'..msg.to.id
   local group_lang = redis:hget(hash,'lang')
   if group_lang then
-  return '🔐 قفل یوزرنیم (@) غیرفعال شد .🔓\n🏵 @SKORT_TM 🏵\n'
+  return '🔐 قفل یوزرنیم (@) غیرفعال شد .🔓'
   else
-    return '🔐 قفل یوزرنیم (@) غیرفعال شد .🔓\n🏵 @SKORT_TM 🏵\n'
+    return '🔐 قفل یوزرنیم (@) غیرفعال شد .🔓'
   end
 end
 
@@ -837,9 +837,9 @@ local function lock_group_media(msg, data, target)
     local hash = 'group:'..msg.to.id
   local group_lang = redis:hget(hash,'lang')
   if group_lang then
-    return '🔐 فیلم عکس اهنگ قفل بود .🔒\n🏵 @SKORT_TM 🏵\n'
+    return '🔐 فیلم عکس اهنگ قفل بود .🔒'
     else
-    return '🔐 فیلم عکس اهنگ قفل بود .🔒\n🏵 @SKORT_TM 🏵\n'
+    return '🔐 فیلم عکس اهنگ قفل بود .🔒'
   end
   end
     data[tostring(target)]['settings']['media'] = 'yes'
@@ -847,9 +847,9 @@ local function lock_group_media(msg, data, target)
     local hash = 'group:'..msg.to.id
   local group_lang = redis:hget(hash,'lang')
   if group_lang then
-    return '🔐 فیلم عکس اهنگ قفل شد .🔒\n🏵 @SKORT_TM 🏵\n'
+    return '🔐 فیلم عکس اهنگ قفل شد .🔒'
     else 
-    return '🔐 فیلم عکس اهنگ قفل شد .🔒\n🏵 @SKORT_TM 🏵\n'
+    return '🔐 فیلم عکس اهنگ قفل شد .🔒'
   end
 end
 
@@ -862,9 +862,9 @@ local function unlock_group_media(msg, data, target)
   local hash = 'group:'..msg.to.id
   local group_lang = redis:hget(hash,'lang')
   if group_lang then
-   return  '🔐 فیلم عکس اهنگ غیرفعال بود .🔓\n🏵 @SKORT_TM 🏵\n'
+   return  '🔐 فیلم عکس اهنگ غیرفعال بود .🔓'
    else
-    return '🔐 فیلم عکس اهنگ غیرفعال بود .🔓\n🏵 @SKORT_TM 🏵\n'
+    return '🔐 فیلم عکس اهنگ غیرفعال بود .🔓'
     end
     end
     data[tostring(target)]['settings']['media'] = 'no'
@@ -872,9 +872,9 @@ local function unlock_group_media(msg, data, target)
     local hash = 'group:'..msg.to.id
   local group_lang = redis:hget(hash,'lang')
   if group_lang then
-    return '🔐 فیلم عکس اهنگ غیرفعال شد .🔓\n🏵 @SKORT_TM 🏵\n'
+    return '🔐 فیلم عکس اهنگ غیرفعال شد .🔓'
     else
-    return '🔐 فیلم عکس اهنگ غیرفعال شد .🔓\n🏵 @SKORT_TM 🏵\n'
+    return '🔐 فیلم عکس اهنگ غیرفعال شد .🔓'
   end
 end
 
@@ -988,9 +988,9 @@ local function lock_group_join(msg, data, target)
    local hash = 'group:'..msg.to.id
   local group_lang = redis:hget(hash,'lang')
   if group_lang then
-    return '🔐  ورود اعضا جدید ممنوع بود .🔒\n🏵 @SKORT_TM 🏵\n'
+    return '🔐  ورود اعضا جدید ممنوع بود .🔒'
     else
-    return '🔐  ورود اعضا جدید ممنوع بود .🔒\n🏵 @SKORT_TM 🏵\n'
+    return '🔐  ورود اعضا جدید ممنوع بود .🔒'
     end
     end
     data[tostring(target)]['settings']['join'] = 'yes'
@@ -998,9 +998,9 @@ local function lock_group_join(msg, data, target)
     local hash = 'group:'..msg.to.id
   local group_lang = redis:hget(hash,'lang')
   if group_lang then
-    return '🔐 ورود اعضا جدید ممنوع شد .🔒\n⚠️ اخطار : کاربران نمیتوانند عضو گروه شوند . ⚠️\n🏵 @SKORT_TM 🏵\n'
+    return '🔐 ورود اعضا جدید ممنوع شد .🔒\n⚠️ اخطار : کاربران نمیتوانند عضو گروه شوند . ⚠️'
     else
-    return '🔐 ورود اعضا جدید ممنوع شد .🔒\n⚠️ اخطار : کاربران نمیتوانند عضو گروه شوند . ⚠️\n🏵 @SKORT_TM 🏵\n'
+    return '🔐 ورود اعضا جدید ممنوع شد .🔒\n⚠️ اخطار : کاربران نمیتوانند عضو گروه شوند . ⚠️'
   end
 end
 
@@ -1013,9 +1013,9 @@ local function unlock_group_join(msg, data, target)
   local hash = 'group:'..msg.to.id
   local group_lang = redis:hget(hash,'lang')
   if group_lang then
-    return '🔐 ورود اعضا جدید آزاد بود .🔓\n🏵 @SKORT_TM 🏵\n'
+    return '🔐 ورود اعضا جدید آزاد بود .🔓'
     else
-    return '🔐 ورود اعضا جدید آزاد بود .🔓\n🏵 @SKORT_TM 🏵\n'
+    return '🔐 ورود اعضا جدید آزاد بود .🔓'
     end
     end
     data[tostring(target)]['settings']['join'] = 'no'
@@ -1023,9 +1023,9 @@ local function unlock_group_join(msg, data, target)
     local hash = 'group:'..msg.to.id
   local group_lang = redis:hget(hash,'lang')
   if group_lang then
-    return '🔐 ورود اعضا جدید آزاد شد .🔓\n🏵 @SKORT_TM 🏵\n'
+    return '🔐 ورود اعضا جدید آزاد شد .🔓'
     else
-    return '🔐 ورود اعضا جدید آزاد شد .🔓\n🏵 @SKORT_TM 🏵\n'
+    return '🔐 ورود اعضا جدید آزاد شد .🔓'
   end
 end
 
@@ -1065,9 +1065,9 @@ local function lock_group_fwd(msg, data, target)
   local hash = 'group:'..msg.to.id
   local group_lang = redis:hget(hash,'lang')
   if group_lang then
-  return '🔐 قفل فوروارد فعال بود .🔒\n🏵 @SKORT_TM 🏵\n'
+  return '🔐 قفل فوروارد فعال بود .🔒'
   else
-    return '🔐 قفل فوروارد فعال بود .🔒\n🏵 @SKORT_TM 🏵\n'
+    return '🔐 قفل فوروارد فعال بود .🔒'
   end
   end
     data[tostring(target)]['settings']['lock_fwd'] = 'yes'
@@ -1075,9 +1075,9 @@ local function lock_group_fwd(msg, data, target)
     local hash = 'group:'..msg.to.id
   local group_lang = redis:hget(hash,'lang')
   if group_lang then
-    return '🔐 قفل فوروارد فعال شد .🔒\n🏵 @SKORT_TM 🏵\n'
+    return '🔐 قفل فوروارد فعال شد .🔒'
     else
-    return '🔐 قفل فوروارد فعال شد .🔒\n🏵 @SKORT_TM 🏵\n'
+    return '🔐 قفل فوروارد فعال شد .🔒'
   end
 end
 
@@ -1090,9 +1090,9 @@ local function unlock_group_fwd(msg, data, target)
   local hash = 'group:'..msg.to.id
   local group_lang = redis:hget(hash,'lang')
   if group_lang then
-    return '🔐 قفل فوروارد غیرفعال بود .🔓\n🏵 @SKORT_TM 🏵\n'
+    return '🔐 قفل فوروارد غیرفعال بود .🔓'
   else
-  return '🔐 قفل فوروارد غیرفعال بود .🔓\n🏵 @SKORT_TM 🏵\n'
+  return '🔐 قفل فوروارد غیرفعال بود .🔓'
   end
   end
     data[tostring(target)]['settings']['lock_fwd'] = 'no'
@@ -1100,9 +1100,9 @@ local function unlock_group_fwd(msg, data, target)
     local hash = 'group:'..msg.to.id
   local group_lang = redis:hget(hash,'lang')
   if group_lang then
-    return '🔐 قفل فوروارد غیرفعال شد .🔓\n🏵 @SKORT_TM 🏵\n'
+    return '🔐 قفل فوروارد غیرفعال شد .🔓'
     else
-    return '🔐 قفل فوروارد غیرفعال شد .🔓\n🏵 @SKORT_TM 🏵\n'
+    return '🔐 قفل فوروارد غیرفعال شد .🔓'
   end
 end
 
@@ -1115,9 +1115,9 @@ local function lock_group_english(msg, data, target)
   local hash = 'group:'..msg.to.id
   local group_lang = redis:hget(hash,'lang')
   if group_lang then
-  return '🔐 قفل لاتین فعال بود .🔒\n🏵 @SKORT_TM 🏵\n'
+  return '🔐 قفل لاتین فعال بود .🔒'
   else
-    return '🔐 قفل لاتین فعال بود .🔒\n🏵 @SKORT_TM 🏵\n'
+    return '🔐 قفل لاتین فعال بود .🔒'
   end
   end
     data[tostring(target)]['settings']['english'] = 'yes'
@@ -1125,9 +1125,9 @@ local function lock_group_english(msg, data, target)
     local hash = 'group:'..msg.to.id
   local group_lang = redis:hget(hash,'lang')
   if group_lang then
-   return '🔐 زبان لاتین قفل شد .🔒⚠️ اخطار : کاربران نمیتوانند به زبان انگلیسی چت کنند . ⚠️\n🏵 @SKORT_TM 🏵\n'
+   return '🔐 زبان لاتین قفل شد .🔒⚠️ اخطار : کاربران نمیتوانند به زبان انگلیسی چت کنند . ⚠️'
    else
-    return '🔐 زبان لاتین قفل شد .🔒⚠️ اخطار : کاربران نمیتوانند به زبان انگلیسی چت کنند . ⚠️\n🏵 @SKORT_TM 🏵\n'
+    return '🔐 زبان لاتین قفل شد .🔒⚠️ اخطار : کاربران نمیتوانند به زبان انگلیسی چت کنند . ⚠️'
   end
 end
 
@@ -1140,9 +1140,9 @@ local function unlock_group_english(msg, data, target)
   local hash = 'group:'..msg.to.id
   local group_lang = redis:hget(hash,'lang')
   if group_lang then
-  return '🔐 قفل لاتین غیرفعال بود .🔓\n🏵 @SKORT_TM 🏵\n'
+  return '🔐 قفل لاتین غیرفعال بود .🔓'
   else
-    return '🔐 قفل لاتین غیرفعال بود .🔓\n🏵 @SKORT_TM 🏵\n'
+    return '🔐 قفل لاتین غیرفعال بود .🔓'
   end
   end
     data[tostring(target)]['settings']['english'] = 'no'
@@ -1150,9 +1150,9 @@ local function unlock_group_english(msg, data, target)
     local hash = 'group:'..msg.to.id
   local group_lang = redis:hget(hash,'lang')
   if group_lang then
-  return '🔐 قفل لاتین غیرفعال شد .🔓\n🏵 @SKORT_TM 🏵\n'
+  return '🔐 قفل لاتین غیرفعال شد .🔓'
   else
-    return '🔐 قفل لاتین غیرفعال شد .🔓\n🏵 @SKORT_TM 🏵\n'
+    return '🔐 قفل لاتین غیرفعال شد .🔓'
   end
 end
 
@@ -1165,9 +1165,9 @@ local function lock_group_emoji(msg, data, target)
   local hash = 'group:'..msg.to.id
   local group_lang = redis:hget(hash,'lang')
   if group_lang then
-    return '🔐 قفل شکلک فعال بود .🔒\n🏵 @SKORT_TM 🏵\n'
+    return '🔐 قفل شکلک فعال بود .🔒'
   else
-  return '🔐 قفل شکلک فعال بود .🔒\n🏵 @SKORT_TM 🏵\n'
+  return '🔐 قفل شکلک فعال بود .🔒'
   end
   end
     data[tostring(target)]['settings']['lock_emoji'] = 'yes'
@@ -1175,9 +1175,9 @@ local function lock_group_emoji(msg, data, target)
     local hash = 'group:'..msg.to.id
   local group_lang = redis:hget(hash,'lang')
   if group_lang then
-    return '🔐 قفل شکلک فعال شد .🔒\n🏵 @SKORT_TM 🏵\n'
+    return '🔐 قفل شکلک فعال شد .🔒'
     else 
-    return '🔐 قفل شکلک فعال شد .🔒\n🏵 @SKORT_TM 🏵\n'
+    return '🔐 قفل شکلک فعال شد .🔒'
   end
 end
 
@@ -1190,9 +1190,9 @@ local function unlock_group_emoji(msg, data, target)
   local hash = 'group:'..msg.to.id
   local group_lang = redis:hget(hash,'lang')
   if group_lang then
-    return '🔐 قفل شکلک غیرفعال بود .🔓\n🏵 @SKORT_TM 🏵\n'
+    return '🔐 قفل شکلک غیرفعال بود .🔓'
   else
-  return '🔐 قفل شکلک غیرفعال بود .🔓\n🏵 @SKORT_TM 🏵\n'
+  return '🔐 قفل شکلک غیرفعال بود .🔓'
   end
   end
     data[tostring(target)]['settings']['lock_emoji'] = 'no'
@@ -1200,9 +1200,9 @@ local function unlock_group_emoji(msg, data, target)
     local hash = 'group:'..msg.to.id
   local group_lang = redis:hget(hash,'lang')
   if group_lang then
-    return '🔐 قفل شکلک غیرفعال شد .🔓\n🏵 @SKORT_TM 🏵\n'
+    return '🔐 قفل شکلک غیرفعال شد .🔓'
     else
-    return '🔐 قفل شکلک غیرفعال شد .🔓\n🏵 @SKORT_TM 🏵\n'
+    return '🔐 قفل شکلک غیرفعال شد .🔓'
   end
 end
 
@@ -1215,9 +1215,9 @@ local function lock_group_tag(msg, data, target)
   local hash = 'group:'..msg.to.id
   local group_lang = redis:hget(hash,'lang')
   if group_lang then
-  return '🔐 قفل هشتگ (#) فعال بود .🔒\n🏵 @SKORT_TM 🏵\n'
+  return '🔐 قفل هشتگ (#) فعال بود .🔒'
   else
-    return '🔐 قفل هشتگ (#) فعال بود .🔒\n🏵 @SKORT_TM 🏵\n'
+    return '🔐 قفل هشتگ (#) فعال بود .🔒'
   end
   end
     data[tostring(target)]['settings']['tag'] = 'yes'
@@ -1225,9 +1225,9 @@ local function lock_group_tag(msg, data, target)
     local hash = 'group:'..msg.to.id
   local group_lang = redis:hget(hash,'lang')
   if group_lang then
-  return '🔐 قفل هشتگ (#) فعال شد .🔒\n🏵 @SKORT_TM 🏵\n'
+  return '🔐 قفل هشتگ (#) فعال شد .🔒'
   else
-    return '🔐 قفل هشتگ (#) فعال شد .🔒\n🏵 @SKORT_TM 🏵\n'
+    return '🔐 قفل هشتگ (#) فعال شد .🔒'
   end
 end
 
@@ -1240,9 +1240,9 @@ local function unlock_group_tag(msg, data, target)
   local hash = 'group:'..msg.to.id
   local group_lang = redis:hget(hash,'lang')
   if group_lang then
-  return '🔐 قفل هشتگ (#) غیرفعال بود .🔓\n🏵 @SKORT_TM 🏵\n'
+  return '🔐 قفل هشتگ (#) غیرفعال بود .🔓'
   else
-    return '🔐 قفل هشتگ (#) غیرفعال بود .🔓\n🏵 @SKORT_TM 🏵\n'
+    return '🔐 قفل هشتگ (#) غیرفعال بود .🔓'
   end
   end
     data[tostring(target)]['settings']['tag'] = 'no'
@@ -1250,9 +1250,9 @@ local function unlock_group_tag(msg, data, target)
     local hash = 'group:'..msg.to.id
   local group_lang = redis:hget(hash,'lang')
   if group_lang then
-  return '🔐 قفل هشتگ (#) غیرفعال شد .🔓\n🏵 @SKORT_TM 🏵\n'
+  return '🔐 قفل هشتگ (#) غیرفعال شد .🔓'
   else
-    return '🔐 قفل هشتگ (#) غیرفعال شد .🔓\n🏵 @SKORT_TM 🏵\n'
+    return '🔐 قفل هشتگ (#) غیرفعال شد .🔓'
   end
 end
 
@@ -1268,9 +1268,9 @@ local function lock_group_spam(msg, data, target)
   local hash = 'group:'..msg.to.id
   local group_lang = redis:hget(hash,'lang')
   if group_lang then
-    return '🔐 قفل اسپم فعال بود .🔒\n🏵 @SKORT_TM 🏵\n'
+    return '🔐 قفل اسپم فعال بود .🔒'
   else
-  return '🔐 قفل اسپم فعال بود .🔒\n🏵 @SKORT_TM 🏵\n'
+  return '🔐 قفل اسپم فعال بود .🔒'
   end
   end
     data[tostring(target)]['settings']['lock_spam'] = 'yes'
@@ -1278,9 +1278,9 @@ local function lock_group_spam(msg, data, target)
     local hash = 'group:'..msg.to.id
   local group_lang = redis:hget(hash,'lang')
   if group_lang then
-    return '🔐 قفل اسپم فعال شد .🔒\n🏵 @SKORT_TM 🏵\n'
+    return '🔐 قفل اسپم فعال شد .🔒'
     else
-    return '🔐 قفل اسپم فعال شد .🔒\n🏵 @SKORT_TM 🏵\n'
+    return '🔐 قفل اسپم فعال شد .🔒'
   end
 end
 
@@ -1293,9 +1293,9 @@ local function unlock_group_spam(msg, data, target)
   local hash = 'group:'..msg.to.id
   local group_lang = redis:hget(hash,'lang')
   if group_lang then
-    return '🔐 قفل اسپم غیرفعال بود .🔓\n🏵 @SKORT_TM 🏵\n'
+    return '🔐 قفل اسپم غیرفعال بود .🔓'
   else
-  return '🔐 قفل اسپم غیرفعال بود .🔓\n🏵 @SKORT_TM 🏵\n'
+  return '🔐 قفل اسپم غیرفعال بود .🔓'
   end
   end
     data[tostring(target)]['settings']['lock_spam'] = 'no'
@@ -1303,9 +1303,9 @@ local function unlock_group_spam(msg, data, target)
     local hash = 'group:'..msg.to.id
   local group_lang = redis:hget(hash,'lang')
   if group_lang then
-    return '🔐 قفل اسپم غیرفعال شد .🔓\n🏵 @SKORT_TM 🏵\n'
+    return '🔐 قفل اسپم غیرفعال شد .🔓'
     else
-    return '🔐 قفل اسپم غیرفعال شد .🔓\n🏵 @SKORT_TM 🏵\n'
+    return '🔐 قفل اسپم غیرفعال شد .🔓'
   end
 end
 
@@ -1318,9 +1318,9 @@ local function lock_group_flood(msg, data, target)
   local hash = 'group:'..msg.to.id
   local group_lang = redis:hget(hash,'lang')
   if group_lang then
-    return '🔐 قفل فلود فعال بود .🔒\n🏵 @SKORT_TM 🏵\n'
+    return '🔐 قفل فلود فعال بود .🔒'
   else
-  return '🔐 قفل فلود فعال بود .🔒\n🏵 @SKORT_TM 🏵\n'
+  return '🔐 قفل فلود فعال بود .🔒'
   end
   end
     data[tostring(target)]['settings']['flood'] = 'yes'
@@ -1328,9 +1328,9 @@ local function lock_group_flood(msg, data, target)
     local hash = 'group:'..msg.to.id
   local group_lang = redis:hget(hash,'lang')
   if group_lang then
-    return '🔐 قفل فلود فعال شد .🔒\n🏵 @SKORT_TM 🏵\n'
+    return '🔐 قفل فلود فعال شد .🔒'
     else
-    return '🔐 قفل فلود فعال شد .🔒\n🏵 @SKORT_TM 🏵\n'
+    return '🔐 قفل فلود فعال شد .🔒'
   end
 end
 
@@ -1343,9 +1343,9 @@ local function unlock_group_flood(msg, data, target)
   local hash = 'group:'..msg.to.id
   local group_lang = redis:hget(hash,'lang')
   if group_lang then
-    return '🔐 قفل فلود غیرفعال بود .🔓\n🏵 @SKORT_TM 🏵\n'
+    return '🔐 قفل فلود غیرفعال بود .🔓'
   else
-  return '🔐 قفل فلود غیرفعال بود .🔓\n🏵 @SKORT_TM 🏵\n'
+  return '🔐 قفل فلود غیرفعال بود .🔓'
   end
   end
     data[tostring(target)]['settings']['flood'] = 'no'
@@ -1353,9 +1353,9 @@ local function unlock_group_flood(msg, data, target)
     local hash = 'group:'..msg.to.id
   local group_lang = redis:hget(hash,'lang')
   if group_lang then
-    return '🔐 قفل فلود غیرفعال شد .🔓\n🏵 @SKORT_TM 🏵\n'
+    return '🔐 قفل فلود غیرفعال شد .🔓'
     else
-    return '🔐 قفل فلود غیرفعال شد .🔓\n🏵 @SKORT_TM 🏵\n'
+    return '🔐 قفل فلود غیرفعال شد .🔓'
   end
 end
 
@@ -1419,9 +1419,9 @@ local function lock_group_membermod(msg, data, target)
   local hash = 'group:'..msg.to.id
   local group_lang = redis:hget(hash,'lang')
   if group_lang then
-    return '🔐  افزودن کاربر قفل بود .🔒\n🏵 @SKORT_TM 🏵\n'
+    return '🔐  افزودن کاربر قفل بود .🔒'
   else
-  return '🔐  افزودن کاربر قفل بود .🔒\n🏵 @SKORT_TM 🏵\n'
+  return '🔐  افزودن کاربر قفل بود .🔒'
   end
   end
     data[tostring(target)]['settings']['lock_member'] = 'yes'
@@ -1429,9 +1429,9 @@ local function lock_group_membermod(msg, data, target)
   local hash = 'group:'..msg.to.id
   local group_lang = redis:hget(hash,'lang')
   if group_lang then
-  return '🔐 افزودن کاربر قفل شد .🔒⚠️ اخطار : کاربران نمیتوانند دوستان خود را اضافه کنند . ⚠️\n🏵 @SKORT_TM 🏵\n'
+  return '🔐 افزودن کاربر قفل شد .🔒⚠️ اخطار : کاربران نمیتوانند دوستان خود را اضافه کنند . ⚠️'
   else
-  return '🔐 افزودن کاربر قفل شد .🔒⚠️ اخطار : کاربران نمیتوانند دوستان خود را اضافه کنند . ⚠️\n🏵 @SKORT_TM 🏵\n'
+  return '🔐 افزودن کاربر قفل شد .🔒⚠️ اخطار : کاربران نمیتوانند دوستان خود را اضافه کنند . ⚠️'
 end
 end
 
@@ -1444,9 +1444,9 @@ local function unlock_group_membermod(msg, data, target)
   local hash = 'group:'..msg.to.id
   local group_lang = redis:hget(hash,'lang')
   if group_lang then
-    return '🔐 قفل افزودن کاربر غیرفعال بود .🔓\n🏵 @SKORT_TM 🏵\n'
+    return '🔐 قفل افزودن کاربر غیرفعال بود .🔓'
   else
-  return '🔐 قفل افزودن کاربر غیرفعال بود .🔓\n🏵 @SKORT_TM 🏵\n'
+  return '🔐 قفل افزودن کاربر غیرفعال بود .🔓'
   end
   end
     data[tostring(target)]['settings']['lock_member'] = 'no'
@@ -1454,9 +1454,9 @@ local function unlock_group_membermod(msg, data, target)
     local hash = 'group:'..msg.to.id
   local group_lang = redis:hget(hash,'lang')
   if group_lang then
-    return '🔐 قفل افزودن کاربر غیرفعال شد .🔓\n🏵 @SKORT_TM 🏵\n'
+    return '🔐 قفل افزودن کاربر غیرفعال شد .🔓'
     else
-    return '🔐 قفل افزودن کاربر غیرفعال شد .🔓\n🏵 @SKORT_TM 🏵\n'
+    return '🔐 قفل افزودن کاربر غیرفعال شد .🔓'
   end
 end
 
@@ -1469,9 +1469,9 @@ local function lock_group_tgservice(msg, data, target)
   local hash = 'group:'..msg.to.id
   local group_lang = redis:hget(hash,'lang')
   if group_lang then
-  return '🔐  پیامهای سیستمی قفل بود .🔒\n🏵 @SKORT_TM 🏵\n'
+  return '🔐  پیامهای سیستمی قفل بود .🔒'
   else
-    return '🔐  پیامهای سیستمی قفل بود .🔒\n🏵 @SKORT_TM 🏵\n'
+    return '🔐  پیامهای سیستمی قفل بود .🔒'
   end
   end
     data[tostring(target)]['settings']['lock_tgservice'] = 'yes'
@@ -1479,9 +1479,9 @@ local function lock_group_tgservice(msg, data, target)
     local hash = 'group:'..msg.to.id
   local group_lang = redis:hget(hash,'lang')
   if group_lang then
-  return '🔐 پیامهای سیستمی قفل شد .🔒\n🏵 @SKORT_TM 🏵\n'
+  return '🔐 پیامهای سیستمی قفل شد .🔒'
   else
-    return '🔐 پیامهای سیستمی قفل شد .🔒\n🏵 @SKORT_TM 🏵\n'
+    return '🔐 پیامهای سیستمی قفل شد .🔒'
   end
 end
 
@@ -1494,9 +1494,9 @@ local function unlock_group_tgservice(msg, data, target)
   local hash = 'group:'..msg.to.id
   local group_lang = redis:hget(hash,'lang')
   if group_lang then
-  return '🔐 قفل پیامهای سیستمی غیرفعال بود .🔓\n🏵 @SKORT_TM 🏵\n'
+  return '🔐 قفل پیامهای سیستمی غیرفعال بود .🔓'
   else
-    return '🔐 قفل پیامهای سیستمی غیرفعال بود .🔓\n🏵 @SKORT_TM 🏵\n'
+    return '🔐 قفل پیامهای سیستمی غیرفعال بود .🔓'
   end
   end
     data[tostring(target)]['settings']['lock_tgservice'] = 'no'
@@ -1504,9 +1504,9 @@ local function unlock_group_tgservice(msg, data, target)
     local hash = 'group:'..msg.to.id
   local group_lang = redis:hget(hash,'lang')
   if group_lang then
-  return '🔐 قفل پیامهای سیستمی غیرفعال شد .🔓\n🏵 @SKORT_TM 🏵\n'
+  return '🔐 قفل پیامهای سیستمی غیرفعال شد .🔓'
   else
-    return '🔐 قفل پیامهای سیستمی غیرفعال شد .🔓\n🏵 @SKORT_TM 🏵\n'
+    return '🔐 قفل پیامهای سیستمی غیرفعال شد .🔓'
   end
 end
 
@@ -1519,9 +1519,9 @@ local function lock_group_sticker(msg, data, target)
   local hash = 'group:'..msg.to.id
   local group_lang = redis:hget(hash,'lang')
   if group_lang then
-    return '🔐 قفل استیکر فعال بود .🔒\n🏵 @SKORT_TM 🏵\n'
+    return '🔐 قفل استیکر فعال بود .🔒'
   else
-  return '🔐 قفل استیکر فعال بود .🔒\n🏵 @SKORT_TM 🏵\n'
+  return '🔐 قفل استیکر فعال بود .🔒'
   end
   end
     data[tostring(target)]['settings']['lock_sticker'] = 'yes'
@@ -1529,9 +1529,9 @@ local function lock_group_sticker(msg, data, target)
     local hash = 'group:'..msg.to.id
   local group_lang = redis:hget(hash,'lang')
   if group_lang then
-    return '🔐 قفل استیکر فعال شد .🔒\n🏵 @SKORT_TM 🏵\n'
+    return '🔐 قفل استیکر فعال شد .🔒'
     else
-    return '🔐 قفل استیکر فعال شد .🔒\n🏵 @SKORT_TM 🏵\n'
+    return '🔐 قفل استیکر فعال شد .🔒'
   end
 end
 local function unlock_group_sticker(msg, data, target)
@@ -1543,9 +1543,9 @@ local function unlock_group_sticker(msg, data, target)
   local hash = 'group:'..msg.to.id
   local group_lang = redis:hget(hash,'lang')
   if group_lang then
-    return '🔐 قفل استیکر غیرفعال بود .🔓\n🏵 @SKORT_TM 🏵\n'
+    return '🔐 قفل استیکر غیرفعال بود .🔓'
   else
-  return '🔐 قفل استیکر غیرفعال بود .🔓\n🏵 @SKORT_TM 🏵\n'
+  return '🔐 قفل استیکر غیرفعال بود .🔓'
   end
   end
     data[tostring(target)]['settings']['lock_sticker'] = 'no'
@@ -1553,9 +1553,9 @@ local function unlock_group_sticker(msg, data, target)
     local hash = 'group:'..msg.to.id
   local group_lang = redis:hget(hash,'lang')
   if group_lang then
-    return '🔐 قفل استیکر غیرفعال شد .🔓\n🏵 @SKORT_TM 🏵\n'
+    return '🔐 قفل استیکر غیرفعال شد .🔓'
     else
-    return '🔐 قفل استیکر غیرفعال شد .🔓\n🏵 @SKORT_TM 🏵\n'
+    return '🔐 قفل استیکر غیرفعال شد .🔓'
   end
 end
 
@@ -1568,9 +1568,9 @@ local function lock_group_bots(msg, data, target)
   local hash = 'group:'..msg.to.id
   local group_lang = redis:hget(hash,'lang')
   if group_lang then
-    return '🔐 قفل ربات فعال بود .🔒\n🏵 @SKORT_TM 🏵\n'
+    return '🔐 قفل ربات فعال بود .🔒'
   else
-  return '🔐 قفل ربات فعال بود .🔒\n🏵 @SKORT_TM 🏵\n'
+  return '🔐 قفل ربات فعال بود .🔒'
   end
   end
     data[tostring(target)]['settings']['lock_bots'] = 'yes'
@@ -1578,9 +1578,9 @@ local function lock_group_bots(msg, data, target)
     local hash = 'group:'..msg.to.id
   local group_lang = redis:hget(hash,'lang')
   if group_lang then
-    return '🔐 قفل ربات فعال شد .🔒\n🏵 @SKORT_TM 🏵\n'
+    return '🔐 قفل ربات فعال شد .🔒'
     else
-    return '🔐 قفل ربات فعال شد .🔒\n🏵 @SKORT_TM 🏵\n'
+    return '🔐 قفل ربات فعال شد .🔒'
   end
 end
 
@@ -1593,9 +1593,9 @@ local function unlock_group_bots(msg, data, target)
   local hash = 'group:'..msg.to.id
   local group_lang = redis:hget(hash,'lang')
   if group_lang then
-    return '🔐 قفل ربات غیرفعال بود .🔓\n🏵 @SKORT_TM 🏵\n'
+    return '🔐 قفل ربات غیرفعال بود .🔓'
   else
-  return '🔐 قفل ربات غیرفعال بود .🔓\n🏵 @SKORT_TM 🏵\n'
+  return '🔐 قفل ربات غیرفعال بود .🔓'
   end
   end
     data[tostring(target)]['settings']['lock_bots'] = 'no'
@@ -1603,9 +1603,9 @@ local function unlock_group_bots(msg, data, target)
     local hash = 'group:'..msg.to.id
   local group_lang = redis:hget(hash,'lang')
   if group_lang then
-    return '🔐 قفل ربات غیرفعال شد .🔓\n🏵 @SKORT_TM 🏵\n'
+    return '🔐 قفل ربات غیرفعال شد .🔓'
     else
-    return '🔐 قفل ربات غیرفعال شد .🔓\n🏵 @SKORT_TM 🏵\n'
+    return '🔐 قفل ربات غیرفعال شد .🔓'
   end
 end
 
@@ -1618,9 +1618,9 @@ local function lock_group_contacts(msg, data, target)
   local hash = 'group:'..msg.to.id
   local group_lang = redis:hget(hash,'lang')
   if group_lang then
-    return '🔐 قفل مخاطب فعال بود .🔒\n🏵 @SKORT_TM 🏵\n'
+    return '🔐 قفل مخاطب فعال بود .🔒'
   else
-  return '🔐 قفل مخاطب فعال بود .🔒\n🏵 @SKORT_TM 🏵\n'
+  return '🔐 قفل مخاطب فعال بود .🔒'
   end
   end
     data[tostring(target)]['settings']['lock_contacts'] = 'yes'
@@ -1628,9 +1628,9 @@ local function lock_group_contacts(msg, data, target)
     local hash = 'group:'..msg.to.id
   local group_lang = redis:hget(hash,'lang')
   if group_lang then
-    return '🔐 قفل مخاطب فعال شد .🔒\n🏵 @SKORT_TM 🏵\n'
+    return '🔐 قفل مخاطب فعال شد .🔒'
     else
-    return '🔐 قفل مخاطب فعال شد .🔒\n🏵 @SKORT_TM 🏵\n'
+    return '🔐 قفل مخاطب فعال شد .🔒'
   end
 end
 
@@ -1643,9 +1643,9 @@ local function unlock_group_contacts(msg, data, target)
   local hash = 'group:'..msg.to.id
   local group_lang = redis:hget(hash,'lang')
   if group_lang then
-    return '🔐 قفل مخاطب غیرفعال بود .🔓\n🏵 @SKORT_TM 🏵\n'
+    return '🔐 قفل مخاطب غیرفعال بود .🔓'
   else
-  return '🔐 قفل مخاطب غیرفعال بود .🔓\n🏵 @SKORT_TM 🏵\n'
+  return '🔐 قفل مخاطب غیرفعال بود .🔓'
   end
   end
     data[tostring(target)]['settings']['lock_contacts'] = 'no'
@@ -1653,9 +1653,9 @@ local function unlock_group_contacts(msg, data, target)
     local hash = 'group:'..msg.to.id
   local group_lang = redis:hget(hash,'lang')
   if group_lang then
-    return '🔐 قفل مخاطب غیرفعال شد .🔓\n🏵 @SKORT_TM 🏵\n'
+    return '🔐 قفل مخاطب غیرفعال شد .🔓'
     else
-    return '🔐 قفل مخاطب غیرفعال شد .🔓\n🏵 @SKORT_TM 🏵\n'
+    return '🔐 قفل مخاطب غیرفعال شد .🔓'
   end
 end
 
@@ -1668,9 +1668,9 @@ local function enable_strict_rules(msg, data, target)
   local hash = 'group:'..msg.to.id
   local group_lang = redis:hget(hash,'lang')
   if group_lang then
-  return '🔐  تنظیمات سختگیرانه فعال بود .🔒\n🏵 @SKORT_TM 🏵\n'
+  return '🔐  تنظیمات سختگیرانه فعال بود .🔒'
   else
-    return '🔐  تنظیمات سختگیرانه فعال بود .🔒\n🏵 @SKORT_TM 🏵\n'
+    return '🔐  تنظیمات سختگیرانه فعال بود .🔒'
   end
   end
     data[tostring(target)]['settings']['strict'] = 'yes'
@@ -1678,9 +1678,9 @@ local function enable_strict_rules(msg, data, target)
     local hash = 'group:'..msg.to.id
   local group_lang = redis:hget(hash,'lang')
   if group_lang then
-  return '🔐 تنظیمات سختگیرانه فعال شد .🔒\n🏵 @SKORT_TM 🏵\n'
+  return '🔐 تنظیمات سختگیرانه فعال شد .🔒'
   else
-    return '🔐 تنظیمات سختگیرانه فعال شد .🔒\n🏵 @SKORT_TM 🏵\n'
+    return '🔐 تنظیمات سختگیرانه فعال شد .🔒'
   end
 end
 
@@ -1693,9 +1693,9 @@ local function disable_strict_rules(msg, data, target)
   local hash = 'group:'..msg.to.id
   local group_lang = redis:hget(hash,'lang')
   if group_lang then
-  return '🔐 تنظیمات سختگیرانه غیرفعال بود .🔓\n🏵 @SKORT_TM 🏵\n'
+  return '🔐 تنظیمات سختگیرانه غیرفعال بود .🔓'
   else
-    return '🔐 تنظیمات سختگیرانه غیرفعال بود .🔓\n🏵 @SKORT_TM 🏵\n'
+    return '🔐 تنظیمات سختگیرانه غیرفعال بود .🔓'
   end
   end
     data[tostring(target)]['settings']['strict'] = 'no'
@@ -1703,9 +1703,9 @@ local function disable_strict_rules(msg, data, target)
     local hash = 'group:'..msg.to.id
   local group_lang = redis:hget(hash,'lang')
   if group_lang then
-  return '🔐 تنظیمات سختگیرانه غیرفعال شد .🔓\n🏵 @SKORT_TM 🏵\n'
+  return '🔐 تنظیمات سختگیرانه غیرفعال شد .🔓'
   else
-    return '🔐 تنظیمات سختگیرانه غیرفعال شد .🔓\n🏵 @SKORT_TM 🏵\n'
+    return '🔐 تنظیمات سختگیرانه غیرفعال شد .🔓'
   end
 end
 --End supergroup locks
@@ -1944,9 +1944,9 @@ function show_supergroup_settingsmod(msg, target)
   local hash = 'group:'..msg.to.id
   local group_lang = redis:hget(hash,'lang')
   if group_lang then
- return reply_msg(msg.id," 📋 لیست تنظیمات گروه 📋\n➖➖➖➖➖➖➖\n🌟 قفل لینک : "..settings.lock_link.." \n🌟 قفل تبلیغات : "..settings.inline.." \n🌟 قفل دستورات : "..settings.cmds.." \n🌟 قفل مخاطب : "..settings.lock_contacts.." \n🌟 قفل فلود : "..settings.flood.." \n🌟 حساسیت : "..NUM_MSG_MAX.." \n🌟 قفل اسپم : "..settings.lock_spam.." \n🌟 قفل ممبر : "..settings.lock_member.." \n🌟 قفل سیستم : "..settings.lock_tgservice.." \n🌟 قفل استیکر : "..settings.lock_sticker.." \n🌟 قفل تگ : "..settings.tag.." \n🌟 قفل شکلک : "..settings.emoji.." \n🌟 قفل انگلیسی : "..settings.english.." \n🌟 قفل فوروارد : "..settings.fwd.." \n🌟 قفل ریپلی : "..settings.reply.." \n🌟 قفل اعضا : "..settings.join.." \n🌟 قفل یوزرنیم : "..settings.username.." \n🌟 قفل مدیا : "..settings.media.." \n🌟 قفل ربات : "..bots_protection.." \n🌟 قفل اپراتور : "..settings.operator.." \n🌟 قفل سختگیرانه : "..settings.strict.." \n🌟 عمومی : "..settings.public.." \n➖➖➖➖➖➖➖ \n 📝 قفل متن  : "..Text.."\n🖼قفل عکس : "..Photo.."\n🎆قفل گيف : "..Gifs.."\n🎤قفل صدا : "..Audio.."\n📽قفل فيلم : "..Video.."\n📂قفل فايل : "..Documents.."\n🔐 قفل همه  : "..All.." \n➖➖➖➖➖➖➖\n💫نوع گروه : "..gp_type.." \n➖➖➖➖➖➖➖\n🏵 @SKORT_TM 🏵\n➖➖➖➖➖➖➖\n", ok_cb, false)
+ return reply_msg(msg.id,"  لیست تنظیمات گروه \n➖➖➖➖➖➖➖\n قفل لینک : "..settings.lock_link.." \n قفل تبلیغات : "..settings.inline.." \n قفل دستورات : "..settings.cmds.." \n قفل مخاطب : "..settings.lock_contacts.." \n قفل فلود : "..settings.flood.." \n حساسیت : "..NUM_MSG_MAX.." \n قفل اسپم : "..settings.lock_spam.." \n قفل ممبر : "..settings.lock_member.." \n قفل سیستم : "..settings.lock_tgservice.." \n قفل استیکر : "..settings.lock_sticker.." \n قفل تگ : "..settings.tag.." \n قفل شکلک : "..settings.emoji.." \n قفل انگلیسی : "..settings.english.." \n قفل فوروارد : "..settings.fwd.." \n قفل ریپلی : "..settings.reply.." \n قفل اعضا : "..settings.join.." \n قفل یوزرنیم : "..settings.username.." \n قفل مدیا : "..settings.media.." \n قفل ربات : "..bots_protection.." \n قفل اپراتور : "..settings.operator.." \n قفل سختگیرانه : "..settings.strict.." \n عمومی : "..settings.public.." \n➖➖➖➖➖➖➖ \n 📝 قفل متن  : "..Text.."\n🖼قفل عکس : "..Photo.."\n🎆قفل گيف : "..Gifs.."\n🎤قفل صدا : "..Audio.."\n📽قفل فيلم : "..Video.."\n📂قفل فايل : "..Documents.."\n🔐 قفل همه  : "..All.." نوع گروه : "..gp_type.." \n➖➖➖➖➖➖➖\n", ok_cb, false)
  else
-return reply_msg(msg.id," 📋 لیست تنظیمات گروه 📋\n➖➖➖➖➖➖➖\n🌟 قفل لینک : "..settings.lock_link.." \n🌟 قفل تبلیغات : "..settings.inline.." \n🌟 قفل دستورات : "..settings.cmds.." \n🌟 قفل مخاطب : "..settings.lock_contacts.." \n🌟 قفل فلود : "..settings.flood.." \n🌟 حساسیت : "..NUM_MSG_MAX.." \n🌟 قفل اسپم : "..settings.lock_spam.." \n🌟 قفل ممبر : "..settings.lock_member.." \n🌟 قفل سیستم : "..settings.lock_tgservice.." \n🌟 قفل استیکر : "..settings.lock_sticker.." \n🌟 قفل تگ : "..settings.tag.." \n🌟 قفل شکلک : "..settings.emoji.." \n🌟 قفل انگلیسی : "..settings.english.." \n🌟 قفل فوروارد : "..settings.fwd.." \n🌟 قفل ریپلی : "..settings.reply.." \n🌟 قفل اعضا : "..settings.join.." \n🌟 قفل یوزرنیم : "..settings.username.." \n🌟 قفل مدیا : "..settings.media.." \n🌟 قفل ربات : "..bots_protection.." \n🌟 قفل اپراتور : "..settings.operator.." \n🌟 قفل سختگیرانه : "..settings.strict.." \n🌟 عمومی : "..settings.public.." \n➖➖➖➖➖➖➖ \n 📝 قفل متن  : "..Text.."\n🖼قفل عکس : "..Photo.."\n🎆قفل گيف : "..Gifs.."\n🎤قفل صدا : "..Audio.."\n📽قفل فيلم : "..Video.."\n📂قفل فايل : "..Documents.."\n🔐 قفل همه  : "..All.." \n➖➖➖➖➖➖➖\n💫نوع گروه : "..gp_type.."  \n➖➖➖➖➖➖➖\n🏵 @SKORT_TM 🏵\n➖➖➖➖➖➖➖\n", ok_cb, false)
+return reply_msg(msg.id,"  لیست تنظیمات گروه \n➖➖➖➖➖➖➖\n قفل لینک : "..settings.lock_link.." \n قفل تبلیغات : "..settings.inline.." \n قفل دستورات : "..settings.cmds.." \n قفل مخاطب : "..settings.lock_contacts.." \n قفل فلود : "..settings.flood.." \n حساسیت : "..NUM_MSG_MAX.." \n قفل اسپم : "..settings.lock_spam.." \n قفل ممبر : "..settings.lock_member.." \n قفل سیستم : "..settings.lock_tgservice.." \n قفل استیکر : "..settings.lock_sticker.." \n قفل تگ : "..settings.tag.." \n قفل شکلک : "..settings.emoji.." \n قفل انگلیسی : "..settings.english.." \n قفل فوروارد : "..settings.fwd.." \n قفل ریپلی : "..settings.reply.." \n قفل اعضا : "..settings.join.." \n قفل یوزرنیم : "..settings.username.." \n قفل مدیا : "..settings.media.." \n قفل ربات : "..bots_protection.." \n قفل اپراتور : "..settings.operator.." \n قفل سختگیرانه : "..settings.strict.." \n عمومی : "..settings.public.." \n➖➖➖➖➖➖➖ \n 📝 قفل متن  : "..Text.."\n🖼قفل عکس : "..Photo.."\n🎆قفل گيف : "..Gifs.."\n🎤قفل صدا : "..Audio.."\n📽قفل فيلم : "..Video.."\n📂قفل فايل : "..Documents.."\n🔐 قفل همه  : "..All.." نوع گروه : "..gp_type.."  \n➖➖➖➖➖➖➖\n", ok_cb, false)
 end
 end 
 
@@ -1985,11 +1985,11 @@ local function promote2(receiver, member_username, user_id)
     return send_large_msg(receiver, 'SuperGroup is not added.')
   end
   if data[group]['moderators'][tostring(user_id)] then
-    return send_large_msg(receiver, member_username..' 👮 همچنان مدیر است . 👮 :')
+    return send_large_msg(receiver, member_username..'  همچنان مدیر است .  :')
   end
   data[group]['moderators'][tostring(user_id)] = member_tag_username
   save_data(_config.moderation.data, data)
-  send_large_msg(receiver, member_username..' 👏 تبریک ترفیع گرفتید . 👏 :.')
+  send_large_msg(receiver, member_username..'  تبریک ترفیع گرفتید .  :.')
 end
 
 local function demote2(receiver, member_username, user_id)
@@ -1999,11 +1999,11 @@ local function demote2(receiver, member_username, user_id)
     return send_large_msg(receiver, 'Group is not added.')
   end
   if not data[group]['moderators'][tostring(user_id)] then
-    return send_large_msg(receiver, member_tag_username..' 😒 قبلا هم مدیر نبود 😐 :')
+    return send_large_msg(receiver, member_tag_username..'  قبلا هم مدیر نبود  :')
   end
   data[group]['moderators'][tostring(user_id)] = nil
   save_data(_config.moderation.data, data)
-  send_large_msg(receiver, member_username..' 😒 ازمدیریت اعزل شدید . 😐 :')
+  send_large_msg(receiver, member_username..'  ازمدیریت اعزل شدید .  :')
 end
 
 local function modlist(msg)
@@ -2014,7 +2014,7 @@ local function modlist(msg)
   end
   -- determine if table is empty
   if next(data[tostring(msg.to.id)]['moderators']) == nil then
-    return '👮مدیری برای گروه انتخاب نشده است .👮'
+    return 'مدیری برای گروه انتخاب نشده است .'
   end
   local i = 1
   local message = '\n📋 لیست مدیران گروه : ' .. string.gsub(msg.to.print_name, '_', ' ') .. ':\n'
@@ -2096,9 +2096,9 @@ local kickedhash = 'kicked:'..msg.from.id..':'..msg.to.id
 		local channel_id = "channel#id"..result.to.peer_id
 		channel_set_admin(channel_id, "user#id"..user_id, ok_cb, false)
 		if result.from.username then
-			text = "@"..result.from.username.." 👏 تبریک ادمین گروه شد :"
+			text = "@"..result.from.username.."  تبریک ادمین گروه شد :"
 		else
-			text = "[ "..user_id.." ]👏 تبریک ادمین گروه شد :"
+			text = "[ "..user_id.." ] تبریک ادمین گروه شد :"
 		end
 		savelog(msg.to.id, name_log.." ["..msg.from.id.."] set: ["..user_id.."] as admin by reply")
 		send_large_msg(channel_id, text)
@@ -2184,14 +2184,14 @@ local kickedhash = 'kicked:'..msg.from.id..':'..msg.to.id
 		print(chat_id)
 		if is_muted_user(chat_id, user_id) then
 			unmute_user(chat_id, user_id)
-			send_large_msg(receiver, "  📋 از لیست سکوت حذف شد : ["..user_id.."] ")
+			send_large_msg(receiver, "   از لیست سکوت حذف شد : ["..user_id.."] ")
 		elseif is_admin1(msg) then
 			mute_user(chat_id, user_id)
 		local mutedhash = 'muted:'..msg.from.id..':'..msg.to.id
         redis:incr(mutedhash)
         local mutedhash = 'muted:'..msg.from.id..':'..msg.to.id
         local muted = redis:get(mutedhash)
-	send_large_msg(receiver, " 📋 به لیست سکوت اضافه شد : ["..user_id.."] ")
+	send_large_msg(receiver, "  به لیست سکوت اضافه شد : ["..user_id.."] ")
 		end
 	end
 end
